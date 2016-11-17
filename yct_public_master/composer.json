@@ -1,0 +1,5 @@
+{
+    "require": {
+        "matriphe/laraciproid": "~1.0"
+    }
+}

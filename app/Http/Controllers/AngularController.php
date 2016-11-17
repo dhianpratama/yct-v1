@@ -1,0 +1,53 @@
+<?php
+
+namespace App\Http\Controllers;
+
+class AngularController extends Controller
+{
+    /**
+     * Serve the angular application.
+     *
+     * @return JSON
+     */
+    public function serveAdminPage()
+    {
+        return view('index');
+    }
+
+    public function servePublicPage()
+    {
+        return view('yct_public/index_public');
+    }
+
+    public function eventListPage(){
+        return view('yct_public/event-grid');
+    }
+
+
+    public function contactUsPage(){
+        return view('yct_public/contact-us');
+    }
+
+    public function eventPage(){
+        return view('yct_public/event-single');
+    }
+
+    public function scholarshipPage(){
+        return view('yct_public/scholarship-list');
+    }
+
+    public function aboutUsPage(){
+        return view('yct_public/about-us');
+    }
+
+
+    /**
+     * Page for unsupported browsers.
+     *
+     * @return JSON
+     */
+    public function unsupported()
+    {
+        return view('unsupported_browser');
+    }
+}
