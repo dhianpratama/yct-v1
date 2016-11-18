@@ -45,11 +45,11 @@
         </div>
         -->
 
-        <!-- Wrap all content -->
-        <div class="wrapper" id="scholarshiplistpage">
+    <!-- Wrap all content -->
+<div class="wrapper" id="scholarshiplistpage">
 
             <!-- HEADER -->
-            <header class="header fixed">
+<header class="header fixed">
     <!-- Top Line -->
     <div class="top-line">
         <div class="container">
@@ -114,292 +114,281 @@
         </div>
     </div>
 </header>
-            <!-- /HEADER -->
+<!-- /HEADER -->
 
-            <!-- Content area -->
-            <div class="content-area">
+<!-- Content area -->
+<div class="content-area">
 
-                <section class="page-section image breadcrumbs overlay">
-                    <div class="container">
-                        <h1>DAPATKAN BEASISWA-MU DISINI</h1>
-                        <ul class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li class="active">Scholarships</li>
-                        </ul>
+    <section class="page-section image breadcrumbs overlay">
+        <div class="container">
+            <h1>DAPATKAN BEASISWA-MU DISINI</h1>
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Scholarships</li>
+            </ul>
+        </div>
+    </section>
+
+
+<!-- PAGE -->
+
+<section class="gray-bg page-section with-sidebar sidebar-right first-section">
+    <div class="container">
+        <!-- Content -->
+        <section id="content" class="content col-sm-8 col-md-9">
+            <div class="listing-meta clearfix">
+                <div class="form-group selectpicker-wrapper sort-events">
+                    <label>sort :</label>
+                    <select
+                            class="selectpicker sort-event" data-width="50%"
+                            data-toggle="tooltip" title="Sort Events">
+                        <!--<option>Relevances</option>-->
+                        <option>Posted date</option>
+                        <option>Start date</option>
+                    </select>
+                </div>
+            </div>
+            <div class="tab-pane fade active in">
+                <!-- new card UI grid systems-->
+                <div class="row">
+                    <div class="events-grid clearfix"  >
+                    <div class="yct-card" v-for="s in scholarships">
+                        <div class="media">
+                            <img src="assets/img/startup-593341_1920.jpg" alt="">
+                            <div class="caption hovered"></div>
+                        </div>
+                        <div class="caption">
+                            <div class="caption-header">
+                                <div class="header-category">
+                                    <p class="header-caption-category">@{{s.event_type_name }}</p>
+                                </div>
+                            </div>
+                            <h3 class="caption-title"><a href="#">@{{s.title}}</a></h3>
+                            <p class="caption-text vacancy">by <a href="#">@{{s.organizer_name}}</a> </p>
+                            <div class="footer-price vacancy">
+                                <div class="caption-price-txt">
+                                    <span>OPEN UNTIL</span>
+                                    <p>
+                                        @{{displayDate(s.due_date)}}
+                                    </p>
+                                </div>
+                                <div class="card-button">
+                                    <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                        </div>
                     </div>
-                </section>
+                </div>
+                </div>
+                <!-- /new card UI grid systems-->
 
-
-                <!-- PAGE -->
-                <section class="page-section with-sidebar sidebar-right first-section">
-                    <div class="container">
-
-                        <!-- Sidebar -->
-                        <aside id="sidebar" class="sidebar col-sm-4 col-md-3">
-                            <!--
-                            <div class="widget google-map-widget">
-                                <div class="google-map1">
-                                    <div id="map-canvas1"></div>
-                                </div>
-                                <a href="#" class="link"><i class="fa fa-map-marker"></i> ISTANBUL, TURKEY</a>
-                            </div>
-                            -->
-                            <div class="widget">
-                                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
-
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingOne">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-                                                    Category
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-                                            <div class="panel-body">
-                                                <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingTwo">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Event Type
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
-                                            <div class="panel-body">
-                                                <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingThree">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    Date
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
-                                            <div class="panel-body">
-                                                <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="panel panel-default">
-                                        <div class="panel-heading" role="tab" id="headingFour">
-                                            <h4 class="panel-title">
-                                                <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                                    Price
-                                                </a>
-                                            </h4>
-                                        </div>
-                                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
-                                            <div class="panel-body">
-                                                <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet.</p>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                            </div>
-
-                        </aside>
-                        <!-- /Sidebar -->
-
-                        <hr class="page-divider transparent visible-xs"/>
-
-                        <!-- Content -->
-                        <section id="content" class="content col-sm-8 col-md-9">
-
-                            <!--
-                            <div class="listing-meta">
-
-                                <div class="filters">
-                                    <a href="#">Business <i class="fa fa-times"></i></a>
-                                    <a href="#">Networking <i class="fa fa-times"></i></a>
-                                    <a href="#">Free <i class="fa fa-times"></i></a>
-                                </div>
-                                
-                                <div class="options">
-                                    <a class="byrevelance" href="#">Revelance</a>
-                                    <a class="bydate active" href="#">DATE</a>
-                                    <ul class="list-grid-tabs" role="tablist">                                    
-                                        <li  class="active" role="presentation"> <a class="view-list" href="#list-view" data-toggle="tab" role="tab" ><i class="fa fa-th-list"></i></a></li>
-                                        <li  role="presentation"><a class="view-th " href="#grid-view" data-toggle="tab" role="tab"><i class="fa fa-th"></i></a></li>
-                                    </ul>
-                                </div>
-
-                            </div>
-                            -->
-
-                            <div class="tab-content">
-                                    <div class="thumbnails events vertical" >
-                                        <div v-for="s in scholarships">
-                                            <div class="thumbnail no-border no-padding">
-                                                <div class="row">
-                                                    <div class="col-md-3 col-sm-3 col-xs-4">
-                                                        <div class="media">
-                                                            <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                            <img src="assets/img/academic_logo.png" alt="">
-                                                            <div class="caption hovered"></div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="col-md-9 col-sm-9 col-xs-8">
-                                                        <div class="caption">
-                                                            <a href="#" class="pull-right">
-                                                                <span class="fa-stack fa-lg">
-                                                                    <i class="fa fa-stack-2x fa-circle-thin"></i>
-                                                                    <i class="fa fa-stack-1x fa-share-alt"></i>
-                                                                </span>
-                                                            </a>
-                                                            <h3 class="caption-title"><a href="#">@{{s.title}}</a></h3>
-                                                            <p class="caption-category"><i class="fa fa-file-text-o"></i> @{{s.organizer_name}}</p>
-                                                            <p class="caption-price">Due date : @{{displayDate(s.due_date)}}</p>
-                                                            
-                                                            <p class="caption-text">Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis. Bibendum auctor, nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis sed odio sit amet nibh vulputate cursus a sit amet mauris.</p>
-                                                            
-                                                            <p class="caption-more"><a href="#" class="btn btn-theme">Info</a></p>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <hr class="page-divider half"/>
-                                    </div>
-
-                                    </div>
-
-                                    <!-- Pagination -->
-                                    <div class="pagination-wrapper">
-                                        <ul class="pagination">
-                                            <li class="disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                                            <li><a href="#">2</a></li>
-                                            <li><a href="#">3</a></li>
-                                            <li><a href="#">4</a></li>
-                                            <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                                        </ul>
-                                    </div>
-                                    <!-- /Pagination -->
-                                </div>
-                                </div>
-                            </div>
-                        </section>
-                        <!-- /Content -->
-
-                    </div>
-                </section>
-                <!-- /PAGE -->
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+                <!-- /Pagination -->
 
             </div>
-            <!-- /Content area -->
+        </section>
+        <!-- /Content -->
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar col-sm-4 col-md-3 padding-left">
 
-            <!-- FOOTER -->
-            <footer class="footer">
-                <div class="footer-widgets">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="widget widget-about">
-                                    <h4 class="widget-title">About Us</h4>
-                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                    <address>
-                                        <div><i class="fa fa-phone"></i>+90 555 55 55</div>
-                                        <div><i class="fa fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></div>
-                                    </address>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-categories">
-                                    <h4 class="widget-title">Popular searches</h4>
-                                    <ul>
-                                        <li><a href="#">Online Registration</a></li>
-                                        <li><a href="#">Sell Event Tickets</a></li>
-                                        <li><a href="#">Post Events</a></li>
-                                        <li><a href="#">Event Planning Software</a></li>
-                                        <li><a href="#">Online Event Management</a></li>
-                                        <li><a href="#">Event Management Software</a></li>
-                                        <li><a href="#">Event Payment</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-twitter">
-                                    <h4 class="widget-title">Recent Tweets</h4>
-                                    <ul>
-                                        <li>
-                                            <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-flickr-feed">
-                                    <h4 class="widget-title"><span>Instagram Photos</span></h4>
-                                    <ul>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-1.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-2.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-3.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-4.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-5.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-6.jpg" alt=""></a></li>
-                                        <!--li><a href="#"><img src="assets/img/preview/sidebar-7.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-8.jpg" alt=""></a></li-->
-                                    </ul>
-                                </div>
-                            </div>
+            <div class="widget">
+                <form class="events-search-form">
+                    {{--<input type="text" v-model="filter.keyword" class="form-control header-search" placeholder="Search"/>--}}
+                    {{--<input type="submit" hidden="hidden" v-on:click="fetchEvents()" />--}}
+                    {{--<span class="search-label"><i class="fa fa-search"></i></span>--}}
+                    <div class="input-group filter-search">
+                        <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i> </span>
+                        <input type="text" class="form-control" placeholder="Search" aria-describedby="sizing-addon2">
+                    </div>
+                </form>
+                <div class="form-group selectpicker-wrapper filter-topic">
+                    <label>Select Topic :</label>
+                    {{--<div class="select-style">--}}
+                        {{--<select v-model="filter.categoryId" v-on:change="onChangeCategory(filter.categoryId)">--}}
+                            {{--<option value="0">All Topics</option>--}}
+                            {{--<option v-for="cat in categories" v-bind:value="cat.id">--}}
+                                {{--@{{ cat.name }}--}}
+                            {{--</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                </div>
+                <div class="filter-title clearfix">
+                    <h3>
+                        Filter
+                    </h3>
+                    <hr>
+                </div>
 
-                        </div>
+                <div class="form-group selectpicker-wrapper filter-time">
+                    <label>filter by time :</label>
+                    <select class="selectpicker input-time"  data-width="100%"  data-toggle="tooltip" title="Select Time">
+                        <option>All Times</option>
+                        <option>Today</option>
+                        <option>This Week</option>
+                        <option>Next Week</option>
+                        <option>This Month</option>
+                        <option>Next Month</option>
+                    </select>
+                </div>
+
+                <div class="form-group selectpicker-wrapper filter-city">
+                    <label>filter by city :</label>
+                  <select
+                            class="selectpicker input-location" data-live-search="true" data-width="100%"
+                            data-toggle="tooltip" title="Select City">
+                        <option>All Cities</option>
+                        <option>Bandung</option>
+                        <option>Jakarta</option>
+                        <option>Yogyakarta</option>
+                        <option>Surabaya</option>
+                        <option>Makassar</option>
+                    </select>
+                    {{--<div class="select-style">--}}
+                        {{--<select v-model="filter.cityId" v-on:change="onChangeCity(filter.cityId)">--}}
+                            {{--<option value="0">All Cities</option>--}}
+                            {{--<option v-for="c in cities" v-bind:value="c.city_id">--}}
+                                {{--@{{ c.city_name }}--}}
+                            {{--</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                </div>
+                {{--<div class="form-group selectpicker-wrapper filter-price">--}}
+                    {{--<label>filter by price :</label>--}}
+                    {{--<div class="select-style">--}}
+                        {{--<select v-model="filter.priceType" v-on:change="onChangePrice(filter.priceType)">--}}
+                            {{--<option value="0">All Prices</option>--}}
+                            {{--<option value="1">Free Only</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="form-group">--}}
+                    {{--<button class="btn btn-primary" v-on:click="fetchEvents()">Search</button>--}}
+                {{--</div>--}}
+            </div>
+
+        </aside>
+        <!-- /Sidebar -->
+    </div>
+</section>
+    <!-- /PAGE -->
+
+</div>
+<!-- /Content area -->
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-widgets">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="widget widget-about">
+                        <h4 class="widget-title">About Us</h4>
+                        <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
+                        <address>
+                            <div><i class="fa fa-phone"></i>+90 555 55 55</div>
+                            <div><i class="fa fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></div>
+                        </address>
                     </div>
                 </div>
-                <div class="footer-meta footer-meta-alt">
-                    <div class="container">
-
-                        <div class="row">
-                            <div class="col-md-9 col-sm-6">
-                                <ul class="footer-menu">
-                                <!--
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Help</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Press</a></li>
-                                    <li><a href="#">Developers</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Cookies</a></li>
-                                    -->
-                                    <li>Copyright © 2016 <span style="font-weight: bold;">Young Creative Thinker.</span>&nbsp; All right reserved</li>
-                                </ul>
-                            </div>
-                            <div class="col-md-3 col-sm-6">
-                                <form action="#" class="country-select">
-                                    <div class="form-group">
-                                        <select class="selectpicker" data-width="100%">
-                                            <option>Select Your Country</option>
-                                            <option>Select Your Country</option>
-                                            <option>Select Your Country</option>
-                                        </select>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-
+                <div class="col-md-3">
+                    <div class="widget widget-categories">
+                        <h4 class="widget-title">Popular searches</h4>
+                        <ul>
+                            <li><a href="#">Online Registration</a></li>
+                            <li><a href="#">Sell Event Tickets</a></li>
+                            <li><a href="#">Post Events</a></li>
+                            <li><a href="#">Event Planning Software</a></li>
+                            <li><a href="#">Online Event Management</a></li>
+                            <li><a href="#">Event Management Software</a></li>
+                            <li><a href="#">Event Payment</a></li>
+                        </ul>
                     </div>
                 </div>
-            </footer>
-            <!-- /FOOTER -->
+                <div class="col-md-3">
+                    <div class="widget widget-twitter">
+                        <h4 class="widget-title">Recent Tweets</h4>
+                        <ul>
+                            <li>
+                                <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
+                            </li>
+                            <li>
+                                <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="widget widget-flickr-feed">
+                        <h4 class="widget-title"><span>Instagram Photos</span></h4>
+                        <ul>
+                            <li><a href="#"><img src="assets/img/preview/sidebar-1.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/preview/sidebar-2.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/preview/sidebar-3.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/preview/sidebar-4.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/preview/sidebar-5.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/preview/sidebar-6.jpg" alt=""></a></li>
+                            <!--li><a href="#"><img src="assets/img/preview/sidebar-7.jpg" alt=""></a></li>
+                            <li><a href="#"><img src="assets/img/preview/sidebar-8.jpg" alt=""></a></li-->
+                        </ul>
+                    </div>
+                </div>
 
-            <div class="to-top"><i class="fa fa-angle-up"></i></div>
+            </div>
+        </div>
+    </div>
+    <div class="footer-meta footer-meta-alt">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-9 col-sm-6">
+                    <ul class="footer-menu">
+                    <!--
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        -->
+                        <li>Copyright © 2016 <span style="font-weight: bold;">Young Creative Thinker.</span>&nbsp; All right reserved</li>
+                    </ul>
+                </div>
+                <div class="col-md-3 col-sm-6">
+                    <form action="#" class="country-select">
+                        <div class="form-group">
+                            <select class="selectpicker" data-width="100%">
+                                <option>Select Your Country</option>
+                                <option>Select Your Country</option>
+                                <option>Select Your Country</option>
+                            </select>
+                        </div>
+                    </form>
+                </div>
+            </div>
 
         </div>
+    </div>
+</footer>
+<!-- /FOOTER -->
+
+<div class="to-top"><i class="fa fa-angle-up"></i></div>
+
+</div>
         <!-- /Wrap all content -->
 
         <!-- Popup: Login -->

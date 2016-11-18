@@ -17,7 +17,7 @@ class EventListController {
                 v.start_date_display = (v.start_date!=null) ? this.moment(v.start_date).format('DD MMMM YYYY') : '';
                 v.end_date_display = (v.end_date!=null) ? this.moment(v.end_date).format('DD MMMM YYYY') : '';
                 v.start_time_display = (v.start_time!=null) ? this.moment(v.start_time).format('HH:mm') : '';
-                v.end_time_display = (v.end_time!=null) ? this.moment(v.send_time).format('HH:mm') : '';
+                v.end_time_display = (v.end_time!=null) ? this.moment(v.end_time).format('HH:mm') : '';
             })
         }
 

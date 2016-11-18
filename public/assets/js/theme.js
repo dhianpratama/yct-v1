@@ -310,7 +310,7 @@ var theme = function () {
             handleSuperFish();
             handleSmoothScroll();
             handleToTopButton();
-            handleAnimatedHeader();
+            //handleAnimatedHeader();
             handleTabsFAQ();
         },
         // Main Slider

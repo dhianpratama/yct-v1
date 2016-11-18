@@ -40,6 +40,14 @@ class AngularController extends Controller
         return view('yct_public/about-us');
     }
 
+    public function scholarSinglePage(){
+        return view('yct_public/scholar-single');
+    }
+
+//    public function playGround(){
+//        return view('yct_public/playground');
+//    }
+
 
     /**
      * Page for unsupported browsers.

@@ -173,7 +173,7 @@
 <section class="page-section images-location">
     <div class="container">
         <div class="row">
-            <div class="images col-lg-6 col-lg-offset-1 col-md-7 col-md-offset-0 col-sm-10 col-sm-offset-1">
+            <div class="images col-lg-6 col-lg-offset-1 col-md-8 col-sm-7 ">
             <!--
                 <div class="owl-carousel img-carousel">
                     <div class="item"><img class="img-responsive" src="assets/img/preview/img-slider-1.jpg" alt=""/></div>
@@ -183,9 +183,9 @@
                     <div class="item"></div>
                 </div>
                 -->
-                <img class="img-responsive" v-bind:src="event.picture_url" style="height:400px;" alt=""/>
+                <img class="img-responsive" v-bind:src="event.picture_url"  alt=""/>
             </div>
-            <div class="time-location col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 col-sm-6 col-sm-offset-3">
+            <div class="time-location col-lg-4 col-md-4 col-sm-5">
                 <!--<ul>-->
                     <!--<li><a href="#">Tempat : Auditorium Lantai 4 Gedung Jenderal Soedirman UPN “Veteran” </a></li>-->
                     <!--<li>Jakarta</li>-->
@@ -221,9 +221,9 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
-            <!--
+
                 <h2>description</h2>
-                <p>The first part of this half-day program focuses on fundamental causal questions, such as how to perform causal identification and estimate causal effects from observational data. In the second half of the program, we apply these causal concepts to the field of marketing science.</p>
+                <!--<p>The first part of this half-day program focuses on fundamental causal questions, such as how to perform causal identification and estimate causal effects from observational data. In the second half of the program, we apply these causal concepts to the field of marketing science.</p>
                 <p>We utilize recent advances in Artificial Intelligence to generate a model of a high-dimensional problem domain, of which we have data available for sales, multiple advertising channels, competitive advertising, and seasonal variables. More specifically, we use BayesiaLab to machine-learn a bayesian network model from the available historical data. On the basis of the network, plus the causal identification criteria presented in the morning, we can analyze the nonlinear response of sales to the input of all marketing drivers.</p>
                 <p>This allows us to isolate the (mostly nonlinear) direct effects of each marketing driver. We can now proceed to marketing mix optimization and utilize BayesiaLab's genetic optimization algorithm. To conclude the seminar, we present an innovative method for estimating contributions and synergies with counterfactuals, which is conveniently implemented in BayesiaLab.</p>
                 -->

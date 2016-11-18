@@ -74,7 +74,7 @@
                                                 <!--<i class="fa logo-hex fa-stack-2x"></i>-->
                                                 <!--<i class="fa logo-fa fa-map-marker fa-stack-1x"></i>-->
                                             <!--</span>-->
-                                <img src="assets/img/yct_logo.png" style="width:110px;" />
+                                <img src="assets/img/yct_logo.png"/>
                             </a>
                         </div>
                         <!-- /Logo -->
@@ -165,81 +165,506 @@
                 </div>
 
                 <!-- PAGE -->
-                <section class="page-section">
-                    <div class="container">
+                {{--<section class="page-section">--}}
+                    {{--<div class="container">--}}
 
-                        <div class="clear clearfix overflowed">
-                            <div class="section-title pull-left" style="width: auto;">
-                                <span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>
+                        {{--<div class="clear clearfix overflowed">--}}
+                            {{--<div class="section-title pull-left" style="width: auto;">--}}
+                                {{--<span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>--}}
+                            {{--</div>--}}
+                            {{--<ul id="filtrable-events" class="filtrable clearfix">--}}
+                                {{--<li class="all"><a href="#" data-filter="*">Latest Events</a></li>--}}
+                            {{--</ul>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="row thumbnails events vertical isotope isotope-items">--}}
+
+                            {{--<div class="col-md-6 col-sm-6 isotope-item festival" v-for="e in events">--}}
+                                {{--<div class="thumbnail no-border no-padding">--}}
+                                    {{--<div class="row">--}}
+                                        {{--<div class="col-md-4">--}}
+                                            {{--<div class="media">--}}
+                                                {{--<a href="#" class="like"><i class="fa fa-heart"></i></a>--}}
+                                                {{--<img src="assets/img/preview/event-1.jpg" alt="">--}}
+                                                {{--<div class="caption hovered"></div>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                        {{--<div class="col-md-8">--}}
+                                            {{--<div class="caption">--}}
+                                                {{--<h3 class="caption-title"><a href="/event">@{{e.title}}</a></h3>--}}
+                                                {{--<p class="caption-category"><i class="fa fa-file-text-o"></i> @{{displayDate(e.start_date)}} on @{{e.venue}} / @{{e.city}}</p>--}}
+                                                {{--<p class="caption-price">@{{formatMoney(e.ticket_price, 'Rp')}}</p>--}}
+                                                {{--<p class="caption-text">Click details to read more about this event.</p>--}}
+                                                {{--<p class="caption-more"><a href="/event" class="btn btn-theme">Details</a></p>--}}
+                                            {{--</div>--}}
+                                        {{--</div>--}}
+                                    {{--</div>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+
+                        {{--<div class="text-center margin-top">--}}
+                            {{--<a data-animation="fadeInUp" data-animation-delay="100" href="/events" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-file-text-o"></i> See all events</a>--}}
+                        {{--</div>--}}
+
+                    {{--</div>--}}
+                {{--</section>--}}
+                <!-- /PAGE -->
+
+                <!-- Section : YCT -->
+                <section class="page-section about-yct">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="image-wrapper">
+                                    <img src="assets/img/YCT LOGO 420.png" alt="about yct">
+                                </div>
                             </div>
-                            <ul id="filtrable-events" class="filtrable clearfix">
-                                <li class="all"><a href="#" data-filter="*">Latest Events</a></li>
+                            <div class="col-md-5 col-sm-6">
+                                <p>Young Creative Thinkers (YCT) merupakan tim kerja yang fokus bergerak dalam bidang pendidikan. YCT merupakan tempat bagi individu yang memiliki daya pikir kreatif yang tinggi untuk mewujudkan tujuan bersama. Tim kerja YCT memiliki tujuan bersama, yaitu untuk memajukan sistem pendidikan di Indonesia dan meningkatkan kapasitas serta keterampilan para pelajar di Indonesia melalui program dan produk yang telah dirancang.</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- Section : YCT -->
+
+                <!-- Section : Events -->
+                <section class="page-section home-previewer">
+                    <div class="container">
+                        <h2 class="org-line">events</h2>
+                        <p class="sub-header">Temukan kegiatan yang menarik dan bermanfaat seperti Seminar, Workshop, Talkshow, Conference, Debate dan banyak kegiatan lainnya yang dapat memperluas wawasan, meningkatkan kemampuan, dan memaksimalkan potensimu. </p>
+                        <div class="horizontal-tab">
+                            <ul class="nav nav-tabs" role="tablist">
+                                <li class="active">
+                                    <a href="#" role="tab" data-toggle="tab"> seminar</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" role="tab" data-toggle="tab"> workshop</a>
+                                </li>
+                                <li class="">
+                                    <a href="#" role="tab" data-toggle="tab"> others</a>
+                                </li>
                             </ul>
                         </div>
-
-                        <div class="row thumbnails events vertical isotope isotope-items">
-
-                            <div class="col-md-6 col-sm-6 isotope-item festival" v-for="e in events">
-                                <div class="thumbnail no-border no-padding">
-                                    <div class="row">
-                                        <div class="col-md-4">
+                        <div class="tab-content">
+                            <div class="tab-pane fade active in" role="tabpanel" id="events">
+                                <div class="title-row">
+                                    <h3>Latest Events</h3>
+                                    <a href="#">view all list <i class="fa fa-angle-double-right"></i> </a>
+                                </div>
+                                <div class="cards-container clearfix">
+                                    <div class="cards-grid clearfix">
+                                        <div class="yct-card">
                                             <div class="media">
-                                                <a href="#" class="like"><i class="fa fa-heart"></i></a>
-                                                <img src="assets/img/preview/event-1.jpg" alt="">
+                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
                                                 <div class="caption hovered"></div>
                                             </div>
-                                        </div>
-                                        <div class="col-md-8">
                                             <div class="caption">
-                                                <h3 class="caption-title"><a href="/event">@{{e.title}}</a></h3>
-                                                <p class="caption-category"><i class="fa fa-file-text-o"></i> @{{displayDate(e.start_date)}} on @{{e.venue}} / @{{e.city}}</p>
-                                                <p class="caption-price">@{{formatMoney(e.ticket_price, 'Rp')}}</p>
-                                                <p class="caption-text">Click details to read more about this event.</p>
-                                                <p class="caption-more"><a href="/event" class="btn btn-theme">Details</a></p>
+                                                <div class="caption-header">
+                                                    <div class="header-category">
+                                                        <p class="header-caption-category">Conference</p>
+                                                    </div>
+                                                </div>
+                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
+                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
+                                                {{--<hr class="caption-divider">--}}
+                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
+                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
+                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
+                                                <div class="footer-price">
+                                                    <div class="caption-price-txt">
+                                                        <span>Price</span>
+                                                        <p>
+                                                            Rp. 12.500
+                                                        </p>
+                                                    </div>
+                                                    <div class="card-button">
+                                                        <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
                                             </div>
+                                        </div>
+                                        <div class="yct-card">
+                                            <div class="media">
+                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                                <div class="caption hovered"></div>
+                                            </div>
+                                            <div class="caption">
+                                                <div class="caption-header">
+                                                    <div class="header-category">
+                                                        <p class="header-caption-category">Conference</p>
+                                                    </div>
+                                                </div>
+                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
+                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
+                                                <!--<hr class="caption-divider">-->
+                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
+                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
+                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
+                                                <div class="footer-price">
+                                                    <div class="caption-price-txt">
+                                                        <span>Price</span>
+                                                        <p>
+                                                            Rp. 12.500
+                                                        </p>
+                                                    </div>
+                                                    <div class="card-button">
+                                                        <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="yct-card">
+                                            <div class="media">
+                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                                <div class="caption hovered"></div>
+                                            </div>
+                                            <div class="caption">
+                                                <div class="caption-header">
+                                                    <div class="header-category">
+                                                        <p class="header-caption-category">Conference</p>
+                                                    </div>
+                                                </div>
+                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
+                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
+                                                <!--<hr class="caption-divider">-->
+                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
+                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
+                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
+                                                <div class="footer-price">
+                                                    <div class="caption-price-txt">
+                                                        <span>Price</span>
+                                                        <p>
+                                                            Rp. 12.500
+                                                        </p>
+                                                    </div>
+                                                    <div class="card-button">
+                                                        <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="yct-card">
+                                            <div class="media">
+                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                                <div class="caption hovered"></div>
+                                            </div>
+                                            <div class="caption">
+                                                <div class="caption-header">
+                                                    <div class="header-category">
+                                                        <p class="header-caption-category">Conference</p>
+                                                    </div>
+                                                </div>
+                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
+                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
+                                                <!--<hr class="caption-divider">-->
+                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
+                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
+                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
+                                                <div class="footer-price">
+                                                    <div class="caption-price-txt">
+                                                        <span>Price</span>
+                                                        <p>
+                                                            Rp. 12.500
+                                                        </p>
+                                                    </div>
+                                                    <div class="card-button">
+                                                        <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                                    </div>
+                                                    <div class="clearfix"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <!-- /Section : Events -->
+
+                <!-- Section : Vacancies -->
+                <section class="page-section home-previewer white">
+                    <div class="container">
+                        <h2 class="org-line">Internship & Volunteer</h2>
+                        <p class="sub-header">Pengalaman dan potensi diri menjadi modal utama bagi individu yang berkarier maupun berwirausaha. Menjadi sukarelawan dan menambah pengalaman melalui kegiatan praktikal akan menambah kepercayaan diri dalam menghadapi dunia nyata.</p>
+                        <div class="title-row">
+                            <h3>Latest Vacancies</h3>
+                            <a href="#">view all list <i class="fa fa-angle-double-right"></i> </a>
+                        </div>
+                        <div class="cards-container clearfix">
+                            <div class="cards-grid clearfix">
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Volunteer</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Dibutuhkan relawan untuk mengajar di Papua</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Papua Mengajar</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    20 Desember
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Internship</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Bergabunglah menjadi bagian tim kami</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Qerja</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    5 January
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Volunteer</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Dibutuhkan relawan untuk mengajar di Papua</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Papua Mengajar</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    20 Desember
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Volunteer</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Dibutuhkan relawan untuk mengajar di Papua</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Papua Mengajar</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    20 Desember
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-
-                        <div class="text-center margin-top">
-                            <a data-animation="fadeInUp" data-animation-delay="100" href="/events" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-file-text-o"></i> See all events</a>
-                        </div>
-
                     </div>
                 </section>
-                <!-- /PAGE -->
+                <!-- /Section : Vacancies -->
 
-
-                <!-- PAGE SPONSORS -->
-                <section class="page-section light" id="sponsors">
+                <!-- Section : Scholarship -->
+                <section class="page-section home-previewer">
                     <div class="container">
-                        <h1 class="section-title">
-                            <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>
-                            <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Event Sponsors <small> / dont forget it</small></span>
-                        </h1>
-                        <div class="partners-carousel" data-animation="fadeInUp" data-animation-delay="300">
-                            <div class="owl-carousel">
-                                <div><a href="#"><img src="assets/img/partner/light/partner-1.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-2.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-3.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-4.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-5.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-6.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-1.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-2.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-3.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-4.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-5.png" alt=""/></a></div>
-                                <div><a href="#"><img src="assets/img/partner/light/partner-6.png" alt=""/></a></div>
+                        <h2 class="org-line">Scholarships</h2>
+                        <p class="sub-header">Banyak sekali informasi beasiswa yang tersedia dan menjadi kesempatan untuk individu yang ingin menggapai cita - citanya menuntut ilmu di universitas impiannya.</p>
+                        <div class="title-row">
+                            <h3>Latest Scholarships</h3>
+                            <a href="#">view all list <i class="fa fa-angle-double-right"></i> </a>
+                        </div>
+                        <div class="cards-container clearfix">
+                            <div class="cards-grid clearfix">
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Scholarship</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    1 December
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Scholarship</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    1 December
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Scholarship</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    1 December
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="yct-card">
+                                    <div class="media">
+                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                    <div class="caption">
+                                        <div class="caption-header">
+                                            <div class="header-category">
+                                                <p class="header-caption-category">Scholarship</p>
+                                            </div>
+                                        </div>
+                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
+                                        <div class="footer-price vacancy">
+                                            <div class="caption-price-txt">
+                                                <span>OPEN UNTIL</span>
+                                                <p>
+                                                    1 December
+                                                </p>
+                                            </div>
+                                            <div class="card-button">
+                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
-                        <div class="text-center margin-top">
-                            <a data-animation="flipInY" data-animation-delay="500" href="#" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-thumbs-up"></i> Become a sponsor</a>
-                        </div>
                     </div>
                 </section>
+                <!-- /Section : Scholarship -->
+
+                <!-- PAGE SPONSORS -->
+                {{--<section class="page-section light" id="sponsors">--}}
+                    {{--<div class="container">--}}
+                        {{--<h1 class="section-title">--}}
+                            {{--<span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-thumbs-up fa-stack-1x"></i></span></span>--}}
+                            {{--<span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Event Sponsors <small> / dont forget it</small></span>--}}
+                        {{--</h1>--}}
+                        {{--<div class="partners-carousel" data-animation="fadeInUp" data-animation-delay="300">--}}
+                            {{--<div class="owl-carousel">--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-1.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-2.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-3.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-4.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-5.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-6.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-1.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-2.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-3.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-4.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-5.png" alt=""/></a></div>--}}
+                                {{--<div><a href="#"><img src="assets/img/partner/light/partner-6.png" alt=""/></a></div>--}}
+                            {{--</div>--}}
+                        {{--</div>--}}
+                        {{--<div class="text-center margin-top">--}}
+                            {{--<a data-animation="flipInY" data-animation-delay="500" href="#" class="btn btn-theme btn-theme-grey-dark btn-theme-md"><i class="fa fa-thumbs-up"></i> Become a sponsor</a>--}}
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</section>--}}
                 <!-- /PAGE SPONSORS -->
 
 
@@ -248,65 +673,65 @@
 
             <!-- FOOTER -->
             <footer class="footer">
-                <div class="footer-widgets">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-md-3">
-                                <div class="widget widget-about">
-                                    <h4 class="widget-title">About Us</h4>
-                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                    <address>
-                                        <div><i class="fa fa-phone"></i>+90 555 55 55</div>
-                                        <div><i class="fa fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></div>
-                                    </address>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-categories">
-                                    <h4 class="widget-title">Popular searches</h4>
-                                    <ul>
-                                        <li><a href="#">Online Registration</a></li>
-                                        <li><a href="#">Sell Event Tickets</a></li>
-                                        <li><a href="#">Post Events</a></li>
-                                        <li><a href="#">Event Planning Software</a></li>
-                                        <li><a href="#">Online Event Management</a></li>
-                                        <li><a href="#">Event Management Software</a></li>
-                                        <li><a href="#">Event Payment</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-twitter">
-                                    <h4 class="widget-title">Recent Tweets</h4>
-                                    <ul>
-                                        <li>
-                                            <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-flickr-feed">
-                                    <h4 class="widget-title"><span>Instagram Photos</span></h4>
-                                    <ul>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-1.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-2.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-3.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-4.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-5.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-6.jpg" alt=""></a></li>
-                                        <!--li><a href="#"><img src="assets/img/preview/sidebar-7.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-8.jpg" alt=""></a></li-->
-                                    </ul>
-                                </div>
-                            </div>
+                {{--<div class="footer-widgets">--}}
+                    {{--<div class="container">--}}
+                        {{--<div class="row">--}}
+                            {{--<div class="col-md-3">--}}
+                                {{--<div class="widget widget-about">--}}
+                                    {{--<h4 class="widget-title">About Us</h4>--}}
+                                    {{--<p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>--}}
+                                    {{--<address>--}}
+                                        {{--<div><i class="fa fa-phone"></i>+90 555 55 55</div>--}}
+                                        {{--<div><i class="fa fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></div>--}}
+                                    {{--</address>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-3">--}}
+                                {{--<div class="widget widget-categories">--}}
+                                    {{--<h4 class="widget-title">Popular searches</h4>--}}
+                                    {{--<ul>--}}
+                                        {{--<li><a href="#">Online Registration</a></li>--}}
+                                        {{--<li><a href="#">Sell Event Tickets</a></li>--}}
+                                        {{--<li><a href="#">Post Events</a></li>--}}
+                                        {{--<li><a href="#">Event Planning Software</a></li>--}}
+                                        {{--<li><a href="#">Online Event Management</a></li>--}}
+                                        {{--<li><a href="#">Event Management Software</a></li>--}}
+                                        {{--<li><a href="#">Event Payment</a></li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-3">--}}
+                                {{--<div class="widget widget-twitter">--}}
+                                    {{--<h4 class="widget-title">Recent Tweets</h4>--}}
+                                    {{--<ul>--}}
+                                        {{--<li>--}}
+                                            {{--<a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>--}}
+                                        {{--</li>--}}
+                                        {{--<li>--}}
+                                            {{--<a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>--}}
+                                        {{--</li>--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
+                            {{--<div class="col-md-3">--}}
+                                {{--<div class="widget widget-flickr-feed">--}}
+                                    {{--<h4 class="widget-title"><span>Instagram Photos</span></h4>--}}
+                                    {{--<ul>--}}
+                                        {{--<li><a href="#"><img src="assets/img/preview/sidebar-1.jpg" alt=""></a></li>--}}
+                                        {{--<li><a href="#"><img src="assets/img/preview/sidebar-2.jpg" alt=""></a></li>--}}
+                                        {{--<li><a href="#"><img src="assets/img/preview/sidebar-3.jpg" alt=""></a></li>--}}
+                                        {{--<li><a href="#"><img src="assets/img/preview/sidebar-4.jpg" alt=""></a></li>--}}
+                                        {{--<li><a href="#"><img src="assets/img/preview/sidebar-5.jpg" alt=""></a></li>--}}
+                                        {{--<li><a href="#"><img src="assets/img/preview/sidebar-6.jpg" alt=""></a></li>--}}
+                                        {{--<!--li><a href="#"><img src="assets/img/preview/sidebar-7.jpg" alt=""></a></li>--}}
+                                        {{--<li><a href="#"><img src="assets/img/preview/sidebar-8.jpg" alt=""></a></li-->--}}
+                                    {{--</ul>--}}
+                                {{--</div>--}}
+                            {{--</div>--}}
 
-                        </div>
-                    </div>
-                </div>
+                        {{--</div>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
                 <div class="footer-meta footer-meta-alt">
                     <div class="container">
 

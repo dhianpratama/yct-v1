@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
 
-<!-- Mirrored from eazzy.me/html/imevent-multipage/event-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:01 GMT -->
+<!-- Mirrored from eazzy.me/html/imevent-multipage/event-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:01 GMT -->
 <head>
     <meta charset="utf-8">
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -26,29 +26,32 @@
     <link href="assets/plugins/animate/animate.min.css" rel="stylesheet">
     <link href="assets/plugins/countdown/jquery.countdown.css" rel="stylesheet">
 
-    <link href="assets/css/custom.css" rel="stylesheet">
     <link href="assets/css/theme.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
 
     <!--[if lt IE 9]>
     <script src="assets/plugins/iesupport/html5shiv.js"></script>
     <script src="assets/plugins/iesupport/respond.min.js"></script>
     <![endif]-->
 </head>
-<body id="home" class="wide body-light multipage multipage-sub">
+
+<body id="scholar-single" class="wide body-light multipage multipage-sub">
 
 <!-- Preloader -->
-<div id="preloader" style="display: none;">
+<!--
+<div id="preloader">
     <div id="status">
         <div class="spinner"></div>
     </div>
 </div>
-
+-->
 
 <!-- Wrap all content -->
-<div class="wrapper" id="eventlistpage">
+<div class="wrapper">
 
 <!-- HEADER -->
 <header class="header fixed">
+
     <!-- Top Line -->
     <div class="top-line">
         <div class="container">
@@ -70,10 +73,10 @@
             <!-- Logo -->
             <div class="logo">
                 <a href="index.html" class="scroll-to">
-                                <!--<span class="fa-stack">-->
-                                    <!--<i class="fa logo-hex fa-stack-2x"></i>-->
-                                    <!--<i class="fa logo-fa fa-map-marker fa-stack-1x"></i>-->
-                                <!--</span>-->
+                    <!--<span class="fa-stack">-->
+                    <!--<i class="fa logo-hex fa-stack-2x"></i>-->
+                    <!--<i class="fa logo-fa fa-map-marker fa-stack-1x"></i>-->
+                    <!--</span>-->
                     <img src="assets/img/yct_logo.png" style="width:110px;" />
                 </a>
             </div>
@@ -87,8 +90,8 @@
                     <li>
                         <a href="/">Home</a>
                     </li>
-                    <li  class="active">
-                        <a href="/events">Events</a>
+                    <li>
+                        <a class="active" href="/events">Events</a>
                     </li>
                     <li>
                         <a href="#">Volunteer & Internship</a>
@@ -99,10 +102,10 @@
                     <li><a href="/about_us">About YCT</a></li>
                     <li><a href="/contact_us">Contact Us</a></li>
                     <!--<li class="header-search-wrapper">-->
-                        <!--<form action="#" class="header-search-form">-->
-                            <!--<input type="text" class="form-control header-search" placeholder="Search"/>-->
-                            <!--<input type="submit" hidden="hidden"/>-->
-                        <!--</form>-->
+                    <!--<form action="#" class="header-search-form">-->
+                    <!--<input type="text" class="form-control header-search" placeholder="Search"/>-->
+                    <!--<input type="submit" hidden="hidden"/>-->
+                    <!--</form>-->
                     <!--</li>-->
                     <!--<li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>-->
                     <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
@@ -116,215 +119,128 @@
 <!-- /HEADER -->
 
 <!-- Content area -->
-<div class="content-area">
+<div class="content-area single-event">
 
+<!--TITLE & BROs-->
 <section class="page-section image breadcrumbs overlay">
     <div class="container">
-        <h1>TEMUKAN EVENT AKADEMIK UNTUK MEMPERKAYA PENGETAHUANMU</h1>
-        <ul class="breadcrumb">
-            <li><a href="#">Home</a></li>
-            <li class="active">Events list</li>
-        </ul>
+        <div class="event-category col-lg-12 col-lg-offset-0 col-md-11 col-md-offset-1 col-sm-12">
+            scholarship
+        </div>
+        <div class="title col-lg-8 col-lg-offset-0 col-md-9 col-md-offset-1">
+            <h1>Konferensi Nasional Epilepsi 2016: Epilepsi dalam Perspektif Ilmiah</h1>
+        </div>
+        <!--<div class="organizer col-lg-7 col-lg-offset-1 col-md-8 col-md-offset-1 col-sm-11">-->
+            <!--<span class="by">by </span> <a href="#">Organizer Name</a>-->
+        <!--</div>-->
     </div>
 </section>
+<!-- / TITLE & BROs-->
 
-<!-- Secondary Nav : Categories filter -->
-<section class="yct_student_event_wrapper">
+
+<!-- TOPICS & CTA-->
+
+<section class="page-section topics">
     <div class="container">
-        <ul v-cloak class="nav nav-tabs" role="tablist">
-            <li class="active">
-                <a href="#" role="tab" data-toggle="tab" v-on:click="onSelectEventType(null)"> ALL</a>
-            </li>
-            <li v-for="t in eventTypes">
-                <a href="#" role="tab" data-toggle="tab" v-on:click="onSelectEventType(t.id)"> @{{t.name}}</a>
-            </li>
-        </ul>
-    </div>
-</section>
-<!-- /Secondary Nav : Categories filter -->
-
-
-<!-- PAGE -->
-<section class="gray-bg page-section with-sidebar sidebar-right first-section">
-    <div class="container">
-<!--<hr class="page-divider transparent visible-xs"/>-->
-
-        <!-- Content -->
-        <section id="content" class="content col-sm-8 col-md-9">
-
-        <div class="listing-meta clearfix">
-
-            <!--
-            <div class="filters">
-                <a href="#">Business <i class="fa fa-times"></i></a>
-                <a href="#">Networking <i class="fa fa-times"></i></a>
-                <a href="#">Free <i class="fa fa-times"></i></a>
-                <a href="#" class="filter-clear">clear all</a>
+        <div class="row">
+            <div class="due-date col-lg-4 col-sm-7">
+                <span>Open Until :</span> 29 January 2017
             </div>
-            -->
-
-            <div class="form-group selectpicker-wrapper sort-events">
-                <label>sort :</label>
-                <select
-                        class="selectpicker sort-event" data-width="50%"
-                        data-toggle="tooltip" title="Sort Events">
-                    <!--<option>Relevances</option>-->
-                    <option>Posted date</option>
-                    <option>Start date</option>
-                </select>
-            </div>
-
-            <!--<div class="options">-->
-                <!--&lt;!&ndash;<a class="byrevelance" href="#">Revelance</a>&ndash;&gt;-->
-                <!--&lt;!&ndash;<a class="bydate active" href="#">DATE</a>&ndash;&gt;-->
-                <!--&lt;!&ndash;<span class="view-style">VIEW IN</span>&ndash;&gt;-->
-                <!--&lt;!&ndash;<ul class="list-grid-tabs" role="tablist">&ndash;&gt;-->
-                    <!--&lt;!&ndash;<li role="presentation"> <a class="view-list" href="#list-view" data-toggle="tab" role="tab" ><i class="fa fa-th-list"></i></a></li>&ndash;&gt;-->
-                    <!--&lt;!&ndash;<li class="active"  role="presentation"><a class="view-th " href="#grid-view" data-toggle="tab" role="tab"><i class="fa fa-th"></i></a></li>&ndash;&gt;-->
-                <!--&lt;!&ndash;</ul>&ndash;&gt;-->
-                <!---->
+            <!--<div class="topic col-lg-8 col-sm-7">-->
+                <!--<span>Category :</span> <a href="#">kesehatan</a>, <a href="#">kesehatan anak</a>, <a href="#">reproduksi</a>-->
             <!--</div>-->
-
+            <!--<div class="col-lg-4 col-sm-5">-->
+                <!--<div class="btn btn-block btn-primary cta">-->
+                    <!--book your seat now-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
-
-        <div class="tab-pane fade active in">
-            <!-- new card UI grid systems-->
-            <div v-cloak class="row">
-                <div class="events-grid clearfix"  >
-                <div class="yct-card" v-for="e in events">
-                    <div class="media">
-                        <img v-bind:src="e.picture_url" alt="">
-                        <div class="caption hovered"></div>
-                    </div>
-                    <div class="caption">
-                        <div class="caption-header">
-                            <div class="header-category">
-                                <p class="header-caption-category">@{{e.event_type_name}}</p>
-                            </div>
-                        </div>
-                        <h3 class="caption-title"><a href="#" v-on:click="onClickEventDetail(e.id)">@{{e.title}}</a></h3>
-                        <p class="caption-text">by <a href="#">@{{e.organizer_name}}</a> </p>
-                        {{--<hr class="caption-divider">--}}
-                        <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> @{{displayDate(e.start_date)}} </p>
-                        <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> @{{e.city}}</p>
-                        <p class="caption-text caption-location"> @{{e.venue}}</p>
-                        <div class="footer-price">
-                            <div class="caption-price-txt">
-                                <span>Price</span>
-                                <p>
-                                    @{{formatMoney(e.ticket_price, 'Rp')}}
-                                </p>
-                            </div>
-                            <div class="card-button">
-                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right" v-on:click="onClickEventDetail(e.id)">info</a>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            </div>
-            <!-- /new card UI grid systems-->
-
-
-            <!-- Pagination -->
-            <div class="pagination-wrapper">
-                <ul class="pagination">
-                    <li class="disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                    <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">4</a></li>
-                    <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                </ul>
-            </div>
-            <!-- /Pagination -->
-        </div>
-        </section>
-        <!-- /Content -->
-        <!-- Sidebar -->
-        <aside id="sidebar" class="sidebar col-sm-4 col-md-3 padding-left">
-
-            <div class="widget">
-                <form class="events-search-form">
-                    <input type="text" v-model="filter.keyword" class="form-control header-search" placeholder="Search"/>
-                    <input type="submit" hidden="hidden" v-on:click="fetchEvents()" />
-                    <span class="search-label"><i class="fa fa-search"></i></span>
-                    <!--<div class="input-group filter-search">-->
-                        <!--<span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i> </span>-->
-                        <!--<input type="text" class="form-control" placeholder="Search" aria-describedby="sizing-addon2">-->
-                    <!--</div>-->
-                </form>
-                <div class="form-group selectpicker-wrapper filter-topic">
-                    <label>Select Topic :</label>
-                    <div class="select-style">
-                        <select v-model="filter.categoryId" v-on:change="onChangeCategory(filter.categoryId)">
-                            <option value="0">All Topics</option>
-                            <option v-for="cat in categories" v-bind:value="cat.id">
-                                @{{ cat.name }}
-                            </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="filter-title clearfix">
-                    <h3>
-                        Filter
-                    </h3>
-                    <hr>
-                </div>
-                <!--
-                <div class="form-group selectpicker-wrapper filter-time">
-                    <label>filter by time :</label>
-                    <select class="selectpicker input-time"  data-width="100%"  data-toggle="tooltip" title="Select Time">
-                        <option>All Times</option>
-                        <option>Today</option>
-                        <option>This Week</option>
-                        <option>Next Week</option>
-                        <option>This Month</option>
-                        <option>Next Month</option>
-                    </select>
-                </div>
-                -->
-                <div class="form-group selectpicker-wrapper filter-city">
-                    <label>filter by city :</label>
-                    <!--<select
-                            class="selectpicker input-location" data-live-search="true" data-width="100%"
-                            data-toggle="tooltip" title="Select City">
-                        <option>All Cities</option>
-                        <option>Bandung</option>
-                        <option>Jakarta</option>
-                        <option>Yogyakarta</option>
-                        <option>Surabaya</option>
-                        <option>Makassar</option>
-                    </select>-->
-                    <div class="select-style">
-                        <select v-model="filter.cityId" v-on:change="onChangeCity(filter.cityId)">
-                            <option value="0">All Cities</option>
-                            <option v-for="c in cities" v-bind:value="c.city_id">
-                                @{{ c.city_name }}
-                            </option>
-                        </select>
-                    </div>
-                </div>
-                <div class="form-group selectpicker-wrapper filter-price">
-                    <label>filter by price :</label>
-                    <div class="select-style">
-                        <select v-model="filter.priceType" v-on:change="onChangePrice(filter.priceType)">
-                            <option value="0">All Prices</option>
-                            <option value="1">Free Only</option>
-                        </select>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    <button class="btn btn-primary" v-on:click="fetchEvents()">Search</button>
-                </div>
-            </div>
-
-        </aside>
-        <!-- /Sidebar -->
     </div>
 </section>
+
+<!-- / TOPICS & CTA-->
+
+
+<!-- DESCRIPTION-->
+<section class="page-section">
+    <div class="container">
+        <div class="row">
+            <div class="main-content col-lg-7 col-md-7">
+                <div class="scholar-caption">
+                    <p>This allows us to isolate the (mostly nonlinear) direct effects of each marketing driver. We can now proceed to marketing mix optimization and utilize BayesiaLab's genetic optimization algorithm. To conclude the seminar, we present an innovative method for estimating contributions and synergies with counterfactuals, which is conveniently implemented in BayesiaLab.</p>
+                </div>
+                <div class="description">
+                    <h2>description</h2>
+                    <p>The first part of this half-day program focuses on fundamental causal questions, such as how to perform causal identification and estimate causal effects from observational data. In the second half of the program, we apply these causal concepts to the field of marketing science.</p>
+                    <p>We utilize recent advances in Artificial Intelligence to generate a model of a high-dimensional problem domain, of which we have data available for sales, multiple advertising channels, competitive advertising, and seasonal variables. More specifically, we use BayesiaLab to machine-learn a bayesian network model from the available historical data. On the basis of the network, plus the causal identification criteria presented in the morning, we can analyze the nonlinear response of sales to the input of all marketing drivers.</p>
+                    <p>This allows us to isolate the (mostly nonlinear) direct effects of each marketing driver. We can now proceed to marketing mix optimization and utilize BayesiaLab's genetic optimization algorithm. To conclude the seminar, we present an innovative method for estimating contributions and synergies with counterfactuals, which is conveniently implemented in BayesiaLab.</p>
+                </div>
+            </div>
+            <aside id="sidebar" class="sidebar col-lg-4 col-lg-offset-1 col-md-4 col-md-offset-1 padding-left">
+                <div class="event-organizer">
+                    <!--<h2>organizer</h2>-->
+                    <div class="organizer-pp">
+                        <img src="assets/img/preview/avatar-v2-2.jpg" alt="">
+                    </div>
+                    <p class="organizer-name">Organizer Name</p>
+                    <p class="organizer-description">The first part of this half-day program focuses on fundamental causal questions, such as how to perform causal identification...</p>
+                    <div class="view-org-profile">
+                        <a href="#" class="">see organization profile >></a>
+                    </div>
+                </div>
+                <!-- BOOKING & CONTACTS-->
+                <div class="contacts">
+                    <h2>contacts</h2>
+                    <ul class="contact-list clearfix">
+                        <li>
+                            <div class="contact-label">
+                                <i class="fa fa-facebook"></i>
+                            </div>
+                            <a class="contact" href="#">/facebookfanpage</a>
+                        </li>
+                        <li>
+                            <div class="contact-label">
+                                <i class="fa fa-twitter"></i>
+                            </div>
+                            <a class="contact" href="#">@twitteraccount</a>
+                        </li>
+                        <li>
+                            <div class="contact-label">
+                                <i class="fa fa-instagram"></i>
+                            </div>
+                            <a class="contact" href="#">@instagramaccount</a>
+                        </li>
+                        <li>
+                            <div class="contact-label">
+                                <i class="fa fa-whatsapp"></i>
+                            </div>
+                            <a class="contact" href="#">+62 wa number</a>
+                        </li>
+                        <li>
+                            <div class="contact-label">
+                                <i class="fa fa-globe"></i>
+                            </div>
+                            <a class="contact" href="#">www.eventsiteurl.co.id</a>
+                        </li>
+                        <li>
+                            <div class="contact-label">
+                                <i class="fa fa-envelope"></i>
+                            </div>
+                            <a class="contact" href="#">organizermail@gooogoo.com</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- / BOOKING & CONTACTS-->
+            </aside>
+        </div>
+    </div>
+</section>
+<!-- / DESCRIPTION-->
+
+
+
+<!-- /Content -->
+
 <!-- /PAGE -->
 
 </div>
@@ -332,7 +248,7 @@
 
 <!-- FOOTER -->
 <footer class="footer">
-    <div class="footer-widgets">
+    <div class="footer-widgets single-event">
         <div class="container">
             <div class="row">
 
@@ -397,20 +313,20 @@
 
             <div class="row">
                 <div class="col-md-9 col-sm-6">
-                   <ul class="footer-menu">
-                                <!--
-                                    <li><a href="#">About</a></li>
-                                    <li><a href="#">Blog</a></li>
-                                    <li><a href="#">Help</a></li>
-                                    <li><a href="#">Careers</a></li>
-                                    <li><a href="#">Press</a></li>
-                                    <li><a href="#">Developers</a></li>
-                                    <li><a href="#">Terms</a></li>
-                                    <li><a href="#">Privacy</a></li>
-                                    <li><a href="#">Cookies</a></li>
-                                    -->
-                                    <li>Copyright © 2016 <span style="font-weight: bold;">Young Creative Thinker.</span>&nbsp; All right reserved</li>
-                                </ul>
+                    <ul class="footer-menu">
+                    <!--
+                        <li><a href="#">About</a></li>
+                        <li><a href="#">Blog</a></li>
+                        <li><a href="#">Help</a></li>
+                        <li><a href="#">Careers</a></li>
+                        <li><a href="#">Press</a></li>
+                        <li><a href="#">Developers</a></li>
+                        <li><a href="#">Terms</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Cookies</a></li>
+                        -->
+                        <li>Copyright © 2016 <span style="font-weight: bold;">Young Creative Thinker.</span>&nbsp; All right reserved</li>
+                    </ul>
                 </div>
                 <div class="col-md-3 col-sm-6">
                     <form action="#" class="country-select">
@@ -431,7 +347,6 @@
 <!-- /FOOTER -->
 
 <div class="to-top"><i class="fa fa-angle-up"></i></div>
-
 
 </div>
 <!-- /Wrap all content -->
@@ -530,7 +445,7 @@
 <script src="assets/plugins/countdown/jquery.plugin.min.js"></script>
 <script src="assets/plugins/countdown/jquery.countdown.min.js"></script>
 <script src="assets/plugins/isotope/jquery.isotope.min.js"></script>
-{{--<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>--}}
+<script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
 
 <!--<script src="assets/js/theme-ajax-mail.js"></script>-->
 <script src="assets/js/theme.js"></script>
@@ -538,9 +453,10 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.js"></script>
 
 <script src="assets/js/vue.js"></script>
-{{--<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-strap/1.1.29/vue-strap.js"></script>--}}
-<script src="assets/js/vue-resource.min.js"></script>
-<script src="assets/js/vue_modules/event-grid.app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-strap/1.1.29/vue-strap.js"></script>
+<script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/vue-router/2.0.1/vue-router.min.js"></script>
+<script src="assets/js/vue_modules/event-single.app.js"></script>
 
 <script type="text/javascript">
     "use strict";
@@ -550,6 +466,8 @@
         theme.initCountDown();
         theme.initPartnerSlider2();
         theme.initImageCarousel();
+        theme.initCorouselSlider4();
+        theme.initCorouselSlider3();
         theme.initTestimonials();
         theme.initGoogleMap();
     });
@@ -595,5 +513,5 @@
 
 </body>
 
-<!-- Mirrored from eazzy.me/html/imevent-multipage/event-grid.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:01 GMT -->
+<!-- Mirrored from eazzy.me/html/imevent-multipage/event-single.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:02 GMT -->
 </html>

@@ -19,12 +19,16 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/event', 'AngularController@eventPage');
     Route::get('/about_us', 'AngularController@aboutUsPage');
     Route::get('/scholarships', 'AngularController@scholarshipPage');
+    Route::get('/scholarship', 'AngularController@scholarSinglePage');
 
     Route::get('/unsupported-browser', 'AngularController@unsupported');
     Route::get('user/verify/{verificationCode}', ['uses' => 'Auth\AuthController@verifyUserEmail']);
     Route::get('auth/{provider}', ['uses' => 'Auth\AuthController@redirectToProvider']);
     Route::get('auth/{provider}/callback', ['uses' => 'Auth\AuthController@handleProviderCallback']);
     Route::get('/api/authenticate/user', 'Auth\AuthController@getAuthenticatedUser');
+
+    //playground
+    //Route::get('/playground', 'AngularController@playGround');
 });
 
 $api->group(['middleware' => ['api']], function ($api) {
