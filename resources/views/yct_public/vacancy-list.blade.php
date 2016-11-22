@@ -4,7 +4,7 @@
 <!--[if IE 8 ]><html class="ie ie8" lang="en"><![endif]-->
 <!--[if (gte IE 9)|!(IE)]><!--><html lang="en"><!--<![endif]-->
     
-<!-- Mirrored from eazzy.me/html/imevent-multipage/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:30 GMT -->
+<!-- Mirrored from eazzy.me/html/imevent-multipage/event-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:01 GMT -->
 <head>
         <meta charset="utf-8">
         <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
@@ -45,44 +45,44 @@
         </div>
         -->
 
-        <!-- Wrap all content -->
-        <div class="wrapper">
+    <!-- Wrap all content -->
+<div class="wrapper" id="scholarshiplistpage">
 
             <!-- HEADER -->
-            <header class="header fixed">
-                <!-- Top Line -->
-                <div class="top-line">
-                    <div class="container">
-                        <div class="yct-agent pull-left">
-                            <a href="#">Join as <span class="yct-orange">YCT</span> agent</a>
-                        </div>
-                        <ul class="user-menu">
-                            <li class="reg"><a href="#popup-login"  data-toggle="modal"> Register</a></li>
-                            <li class="login"><a href="#popup-login" data-toggle="modal"> Login</a></li>
-                        </ul>
-                        <!--<div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div>-->
-                    </div>
-                </div>
-                <!-- /Top Line -->
+<header class="header fixed">
+    <!-- Top Line -->
+    <div class="top-line">
+        <div class="container">
+            <div class="yct-agent pull-left">
+                <a href="#">Join as <span class="yct-orange">YCT</span> agent</a>
+            </div>
+            <ul class="user-menu">
+                <li class="reg"><a href="#popup-login"  data-toggle="modal"> Register</a></li>
+                <li class="login"><a href="#popup-login" data-toggle="modal"> Login</a></li>
+            </ul>
+            <!--<div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div>-->
+        </div>
+    </div>
+    <!-- /Top Line -->
 
-                <div class="container">
-                    <div class="header-wrapper clearfix">
+    <div class="container">
+        <div class="header-wrapper clearfix">
 
-                        <!-- Logo -->
-                        <div class="logo">
-                            <a href="index.html" class="scroll-to">
-                                            <!--<span class="fa-stack">-->
-                                                <!--<i class="fa logo-hex fa-stack-2x"></i>-->
-                                                <!--<i class="fa logo-fa fa-map-marker fa-stack-1x"></i>-->
-                                            <!--</span>-->
-                                <img src="assets/img/yct_logo.png" style="width:110px;" />
-                            </a>
-                        </div>
-                        <!-- /Logo -->
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html" class="scroll-to">
+                                <!--<span class="fa-stack">-->
+                                    <!--<i class="fa logo-hex fa-stack-2x"></i>-->
+                                    <!--<i class="fa logo-fa fa-map-marker fa-stack-1x"></i>-->
+                                <!--</span>-->
+                    <img src="assets/img/yct_logo.png" style="width:110px;" />
+                </a>
+            </div>
+            <!-- /Logo -->
 
-                        <!-- Navigation -->
-                        <div id="mobile-menu"></div>
-                        <nav class="navigation closed clearfix">
+            <!-- Navigation -->
+            <div id="mobile-menu"></div>
+           <nav class="navigation closed clearfix">
                             <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                             <ul class="sf-menu nav">
                                 <li>
@@ -91,13 +91,13 @@
                                 <li>
                                     <a href="/events">Events</a>
                                 </li>
-                                <li>
+                                <li class="active">
                                     <a href="/vacancies">Volunteer & Internship</a>
                                 </li>
                                 <li>
                                     <a href="/scholarships">Scholarship</a>
                                 </li>
-                                <li class="active"><a href="/about_us">About YCT</a></li>
+                                <li><a href="/about_us">About YCT</a></li>
                                <!-- <li><a href="/contact_us">Contact Us</a></li>-->
                                 <!--<li class="header-search-wrapper">-->
                                     <!--<form action="#" class="header-search-form">-->
@@ -106,177 +106,189 @@
                                     <!--</form>-->
                                 <!--</li>-->
                                 <!--<li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>-->
-                                <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
+                                <!--<li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>-->
                             </ul>
                         </nav>
-                        <!-- /Navigation -->
+            <!-- /Navigation -->
 
-                    </div>
+        </div>
+    </div>
+</header>
+<!-- /HEADER -->
+
+<!-- Content area -->
+<div class="content-area">
+
+    <section class="page-section image breadcrumbs overlay">
+        <div class="container">
+            <h1>INTERNSHIP & VOLUNTEER</h1>
+            <ul class="breadcrumb">
+                <li><a href="#">Home</a></li>
+                <li class="active">Scholarships</li>
+            </ul>
+        </div>
+    </section>
+
+
+<!-- PAGE -->
+
+<section class="gray-bg page-section with-sidebar sidebar-right first-section">
+    <div class="container">
+        <!-- Content -->
+        <section id="content" class="content col-sm-8 col-md-9">
+            <div class="listing-meta clearfix">
+                <div class="form-group selectpicker-wrapper sort-events">
+                    <label>sort :</label>
+                    <select
+                            class="selectpicker sort-event" data-width="50%"
+                            data-toggle="tooltip" title="Sort Events">
+                        <!--<option>Relevances</option>-->
+                        <option>Posted date</option>
+                        <option>Start date</option>
+                    </select>
                 </div>
-            </header>
-            <!-- /HEADER -->
-
-            <!-- Content area -->
-            <div class="content-area">
-
-                <section class="page-section image breadcrumbs overlay">
-                    <div class="container">
-                        <h1>Contacts</h1>
-                        <ul class="breadcrumb">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Pages</a></li>
-                            <li class="active">Contact us</li>
-                        </ul>
-                    </div>
-                </section>
-
-
-                <!-- PAGE -->
-                <section class="page-section with-sidebar sidebar-right first-section">
-                    <div class="container">
-
-                        <!-- Content -->
-                        <section id="content" class="content">
-                            <div class="row">
-                                <div class="col-sm-6">
-                                    <h1 class="section-title">
-                                        <span data-animation="flipInY" data-animation-delay="100" class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-ticket fa-stack-1x"></i></span></span>
-                                        <span data-animation="fadeInRight" data-animation-delay="100" class="title-inner">Contact Us <small>/ lorem ipsum</small></span>
-                                    </h1>
-                                    <p>Pellentesque rutrum at sapien at sollicitudin. Nam quis orci at orci fermentum mollis maximus at justo. Duis elit felis, congue egestas tristique quis, dictum vitae massa. Suspendisse at justo enim.</p>
-                                    <p data-animation="fadeInUp" data-animation-delay="200" class="text-uppercase">Apple Store SOHO‎ <br/>
-                                        103 Prince St New York, <br/>
-                                        NY 10012, United States <br/>
-                                        +1 212-226-3126</p>
-                                    <p><a href="mailto:youremail@domain.com">hello@imevent.com</a></p>
-                                </div>
-                                <div class="col-sm-6">
-                                    <!-- Google map -->
-                                    <div class="google-map">
-                                        <div id="map-canvas"></div>
-                                    </div>
-                                    <!-- /Google map -->
-                                </div>
-                            </div>
-                        </section>
-                        <!-- /Content -->
-
-                    </div>
-                </section>
-                <!-- /PAGE -->
-
-                <!-- PAGE CONTACT -->
-                <section class="page-section color">
-                    <div class="container">
-
-                        <!-- Contact form -->
-                        <form name="af-form" method="post" action="#contact" class="af-form row" id="af-form">
-
-                            <div class="col-sm-12 af-outer af-required">
-                                <div class="form-group af-inner">
-                                    <input
-                                        type="text" name="name" id="name" placeholder="Type Your Name..." value="" size="30"
-                                        data-toggle="tooltip" title="Name is required"
-                                        class="form-control placeholder"/>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 af-outer af-required">
-                                <div class="form-group af-inner">
-                                    <input
-                                        type="text" name="email" id="email" placeholder="Type Your Email..." value="" size="30"
-                                        data-toggle="tooltip" title="Email is required"
-                                        class="form-control placeholder"/>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 af-outer af-required">
-                                <div class="form-group af-inner">
-                                    <textarea
-                                        name="message" id="input-message" placeholder="Type Your Message..." rows="4" cols="50"
-                                        data-toggle="tooltip" title="Message is required"
-                                        class="form-control placeholder"></textarea>
-                                </div>
-                            </div>
-
-                            <div class="col-sm-12 af-outer af-required text-center">
-                                <div class="form-group af-inner">
-                                    <input type="submit" name="submit" class="form-button form-button-submit btn btn-theme btn-theme-lg btn-theme-transparent" id="submit_btn" value="Send message" />
-                                </div>
-                            </div>
-
-                        </form>
-                        <!-- /Contact form -->
-
-                    </div>
-                </section>
-                <!-- /PAGE CONTACT -->
-
             </div>
-            <!-- /Content area -->
-
-            <!-- FOOTER -->
-            <footer class="footer">
-                <div class="footer-widgets">
-                    <div class="container">
-                        <div class="row">
-
-                            <div class="col-md-3">
-                                <div class="widget widget-about">
-                                    <h4 class="widget-title">About Us</h4>
-                                    <p>Fusce pellentesque velvitae tincidunt egestas. Pellentesque habitant morbi.Proin gravida nibh vel velit auctor aliquet. Aenean sollicitudin, lorem quis.</p>
-                                    <address>
-                                        <div><i class="fa fa-phone"></i>+90 555 55 55</div>
-                                        <div><i class="fa fa-envelope"></i> <a href="mailto:info@example.com">info@example.com</a></div>
-                                    </address>
+            <div class="tab-pane fade active in">
+                <!-- new card UI grid systems-->
+                <div class="row">
+                    <div class="events-grid clearfix"  >
+                    <div class="yct-card" v-for="s in scholarships">
+                        <div class="media">
+                            <img src="assets/img/startup-593341_1920.jpg" alt="">
+                            <div class="caption hovered"></div>
+                        </div>
+                        <div class="caption">
+                            <div class="caption-header">
+                                <div class="header-category">
+                                    <p class="header-caption-category">@{{s.event_type_name }}</p>
                                 </div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-categories">
-                                    <h4 class="widget-title">Popular searches</h4>
-                                    <ul>
-                                        <li><a href="#">Online Registration</a></li>
-                                        <li><a href="#">Sell Event Tickets</a></li>
-                                        <li><a href="#">Post Events</a></li>
-                                        <li><a href="#">Event Planning Software</a></li>
-                                        <li><a href="#">Online Event Management</a></li>
-                                        <li><a href="#">Event Management Software</a></li>
-                                        <li><a href="#">Event Payment</a></li>
-                                    </ul>
+                            <h3 class="caption-title"><a href="#">@{{s.title}}</a></h3>
+                            <p class="caption-text vacancy">by <a href="#">@{{s.organizer_name}}</a> </p>
+                            <div class="footer-price vacancy">
+                                <div class="caption-price-txt">
+                                    <span>OPEN UNTIL</span>
+                                    <p>
+                                        @{{displayDate(s.due_date)}}
+                                    </p>
                                 </div>
-                            </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-twitter">
-                                    <h4 class="widget-title">Recent Tweets</h4>
-                                    <ul>
-                                        <li>
-                                            <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
-                                        </li>
-                                        <li>
-                                            <a href="#">@isamercan</a> Cupcake chocolate cake sweet roll. Gummies macaroon biscuit cupcake candy dragée. <a href="#">#Conference about 2 hours ago</a>
-                                        </li>
-                                    </ul>
+                                <div class="card-button">
+                                    <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
                                 </div>
+                                <div class="clearfix"></div>
                             </div>
-                            <div class="col-md-3">
-                                <div class="widget widget-flickr-feed">
-                                    <h4 class="widget-title"><span>Instagram Photos</span></h4>
-                                    <ul>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-1.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-2.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-3.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-4.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-5.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-6.jpg" alt=""></a></li>
-                                        <!--li><a href="#"><img src="assets/img/preview/sidebar-7.jpg" alt=""></a></li>
-                                        <li><a href="#"><img src="assets/img/preview/sidebar-8.jpg" alt=""></a></li-->
-                                    </ul>
-                                </div>
-                            </div>
-
                         </div>
                     </div>
                 </div>
+                </div>
+                <!-- /new card UI grid systems-->
+
+                <!-- Pagination -->
+                <div class="pagination-wrapper">
+                    <ul class="pagination">
+                        <li class="disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
+                        <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        <li><a href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#"><i class="fa fa-chevron-right"></i></a></li>
+                    </ul>
+                </div>
+                <!-- /Pagination -->
+
+            </div>
+        </section>
+        <!-- /Content -->
+        <!-- Sidebar -->
+        <aside id="sidebar" class="sidebar col-sm-4 col-md-3 padding-left">
+
+            <div class="widget">
+                <form class="events-search-form">
+                    {{--<input type="text" v-model="filter.keyword" class="form-control header-search" placeholder="Search"/>--}}
+                    {{--<input type="submit" hidden="hidden" v-on:click="fetchEvents()" />--}}
+                    {{--<span class="search-label"><i class="fa fa-search"></i></span>--}}
+                    <div class="input-group filter-search">
+                        <span class="input-group-addon" id="sizing-addon2"><i class="fa fa-search"></i> </span>
+                        <input type="text" class="form-control" placeholder="Search" aria-describedby="sizing-addon2">
+                    </div>
+                </form>
+                <div class="form-group selectpicker-wrapper filter-topic">
+                    <label>Select Topic :</label>
+                    {{--<div class="select-style">--}}
+                        {{--<select v-model="filter.categoryId" v-on:change="onChangeCategory(filter.categoryId)">--}}
+                            {{--<option value="0">All Topics</option>--}}
+                            {{--<option v-for="cat in categories" v-bind:value="cat.id">--}}
+                                {{--@{{ cat.name }}--}}
+                            {{--</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                </div>
+                <div class="filter-title clearfix">
+                    <h3>
+                        Filter
+                    </h3>
+                    <hr>
+                </div>
+
+                <div class="form-group selectpicker-wrapper filter-time">
+                    <label>filter by time :</label>
+                    <select class="selectpicker input-time"  data-width="100%"  data-toggle="tooltip" title="Select Time">
+                        <option>All Times</option>
+                        <option>Today</option>
+                        <option>This Week</option>
+                        <option>Next Week</option>
+                        <option>This Month</option>
+                        <option>Next Month</option>
+                    </select>
+                </div>
+
+                <div class="form-group selectpicker-wrapper filter-city">
+                    <label>filter by city :</label>
+                  <select
+                            class="selectpicker input-location" data-live-search="true" data-width="100%"
+                            data-toggle="tooltip" title="Select City">
+                        <option>All Cities</option>
+                        <option>Bandung</option>
+                        <option>Jakarta</option>
+                        <option>Yogyakarta</option>
+                        <option>Surabaya</option>
+                        <option>Makassar</option>
+                    </select>
+                    {{--<div class="select-style">--}}
+                        {{--<select v-model="filter.cityId" v-on:change="onChangeCity(filter.cityId)">--}}
+                            {{--<option value="0">All Cities</option>--}}
+                            {{--<option v-for="c in cities" v-bind:value="c.city_id">--}}
+                                {{--@{{ c.city_name }}--}}
+                            {{--</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                </div>
+                {{--<div class="form-group selectpicker-wrapper filter-price">--}}
+                    {{--<label>filter by price :</label>--}}
+                    {{--<div class="select-style">--}}
+                        {{--<select v-model="filter.priceType" v-on:change="onChangePrice(filter.priceType)">--}}
+                            {{--<option value="0">All Prices</option>--}}
+                            {{--<option value="1">Free Only</option>--}}
+                        {{--</select>--}}
+                    {{--</div>--}}
+                {{--</div>--}}
+
+                {{--<div class="form-group">--}}
+                    {{--<button class="btn btn-primary" v-on:click="fetchEvents()">Search</button>--}}
+                {{--</div>--}}
+            </div>
+
+        </aside>
+        <!-- /Sidebar -->
+    </div>
+</section>
+    <!-- /PAGE -->
+
+</div>
+<!-- /Content area -->
+
+<!-- FOOTER -->
+<footer class="footer">
                 <div class="footer-meta footer-meta-alt">
                     <div class="container">
 
@@ -313,11 +325,11 @@
                     </div>
                 </div>
             </footer>
-            <!-- /FOOTER -->
+<!-- /FOOTER -->
 
-            <div class="to-top"><i class="fa fa-angle-up"></i></div>
+<div class="to-top"><i class="fa fa-angle-up"></i></div>
 
-        </div>
+</div>
         <!-- /Wrap all content -->
 
         <!-- Popup: Login -->
@@ -418,7 +430,15 @@
 
         <!--<script src="assets/js/theme-ajax-mail.js"></script>-->
         <script src="assets/js/theme.js"></script>
-        
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.15.2/moment.js"></script>
+
+        <script src="assets/js/vue.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vue-strap/1.1.29/vue-strap.js"></script>
+        <script src="https://cdn.jsdelivr.net/vue.resource/1.0.3/vue-resource.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/vuejs-paginator/2.0.0/vuejs-paginator.js"></script>
+        <script src="assets/js/vue_modules/scholarship-list.app.js"></script>
+
         <script type="text/javascript">
             "use strict";
             jQuery(document).ready(function () {
@@ -472,5 +492,5 @@
 
     </body>
 
-<!-- Mirrored from eazzy.me/html/imevent-multipage/contact-us.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:30 GMT -->
+<!-- Mirrored from eazzy.me/html/imevent-multipage/event-list.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 23 Sep 2016 04:24:01 GMT -->
 </html>

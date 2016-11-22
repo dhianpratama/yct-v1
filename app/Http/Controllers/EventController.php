@@ -192,4 +192,38 @@ class EventController extends Controller
 
         return response()->success($event);
     }
+
+    public function getPublicUpcomingEvents(){
+        $take = Input::get('take');
+
+        $query = DB::table('events')
+            ->leftJoin('event_types', 'events.event_type_id', '=', 'event_types.id')
+            ->leftJoin('organizers', 'events.organizer_id', '=', 'organizers.id')
+            ->where('events.is_published',1)
+            ->where('events.start_date', '>=', time());
+
+        if($take>0){
+            $query = $query->take($take);
+        }
+
+        $events = $query->select(   
+                'events.id as id',
+                'events.title as title', 
+                'events.caption as caption', 
+                'event_types.name as event_type_name', 
+                'organizers.name as organizer_name', 
+                'events.price as ticket_price',
+                'events.event_venue as venue',
+                'events.city as city',
+                'events.start_date as start_date',
+                'events.start_time as start_time',
+                'events.end_date as end_date',
+                'events.end_time as end_time',
+                'events.picture_url as picture_url',
+                'events.description as description'
+            )
+        ->get();
+
+        return response()->success($events);
+    }
 }

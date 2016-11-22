@@ -59,7 +59,7 @@
                             <li class="reg"><a href="#popup-login"  data-toggle="modal"> Register</a></li>
                             <li class="login"><a href="#popup-login" data-toggle="modal"> Login</a></li>
                         </ul>
-                        <!--<div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Latest Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div>-->
+                        <!--<div class="hot-line"><span><i class="fa fa-calendar"></i> <strong>Upcoming Event:</strong></span>  Standart Event Name Here  "15 October at 20:00 - 22:00 on Manhattan / New York"</div>-->
                     </div>
                 </div>
                 <!-- /Top Line -->
@@ -83,6 +83,8 @@
                         <div id="mobile-menu"></div>
                         <nav class="navigation closed clearfix">
                             <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
+                            <nav class="navigation closed clearfix">
+                            <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
                             <ul class="sf-menu nav">
                                 <li class="active">
                                     <a href="/">Home</a>
@@ -91,13 +93,13 @@
                                     <a href="/events">Events</a>
                                 </li>
                                 <li>
-                                    <a href="#">Volunteer & Internship</a>
+                                    <a href="/vacancies">Volunteer & Internship</a>
                                 </li>
                                 <li>
                                     <a href="/scholarships">Scholarship</a>
                                 </li>
                                 <li><a href="/about_us">About YCT</a></li>
-                                <li><a href="/contact_us">Contact Us</a></li>
+                               <!-- <li><a href="/contact_us">Contact Us</a></li>-->
                                 <!--<li class="header-search-wrapper">-->
                                     <!--<form action="#" class="header-search-form">-->
                                         <!--<input type="text" class="form-control header-search" placeholder="Search"/>-->
@@ -105,7 +107,7 @@
                                     <!--</form>-->
                                 <!--</li>-->
                                 <!--<li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>-->
-                                <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
+                               <!-- <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>-->
                             </ul>
                         </nav>
                         <!-- /Navigation -->
@@ -173,7 +175,7 @@
                                 {{--<span class="icon-inner"><span class="fa-stack"><i class="fa rhex fa-stack-2x"></i><i class="fa fa-star fa-stack-1x"></i></span></span>--}}
                             {{--</div>--}}
                             {{--<ul id="filtrable-events" class="filtrable clearfix">--}}
-                                {{--<li class="all"><a href="#" data-filter="*">Latest Events</a></li>--}}
+                                {{--<li class="all"><a href="#" data-filter="*">Upcoming Events</a></li>--}}
                             {{--</ul>--}}
                         {{--</div>--}}
 
@@ -233,6 +235,7 @@
                     <div class="container">
                         <h2 class="org-line">events</h2>
                         <p class="sub-header">Temukan kegiatan yang menarik dan bermanfaat seperti Seminar, Workshop, Talkshow, Conference, Debate dan banyak kegiatan lainnya yang dapat memperluas wawasan, meningkatkan kemampuan, dan memaksimalkan potensimu. </p>
+                        <!--
                         <div class="horizontal-tab">
                             <ul class="nav nav-tabs" role="tablist">
                                 <li class="active">
@@ -246,129 +249,37 @@
                                 </li>
                             </ul>
                         </div>
+                        -->
                         <div class="tab-content">
                             <div class="tab-pane fade active in" role="tabpanel" id="events">
                                 <div class="title-row">
-                                    <h3>Latest Events</h3>
-                                    <a href="#">view all list <i class="fa fa-angle-double-right"></i> </a>
+                                    <h3>Upcoming Events</h3>
+                                    <a href="/events">view all list <i class="fa fa-angle-double-right"></i> </a>
                                 </div>
                                 <div class="cards-container clearfix">
                                     <div class="cards-grid clearfix">
-                                        <div class="yct-card">
+                                        <div class="yct-card" v-for="e in events">
                                             <div class="media">
-                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                                <img v-bind:src="e.picture_url" alt="">
                                                 <div class="caption hovered"></div>
                                             </div>
                                             <div class="caption">
                                                 <div class="caption-header">
                                                     <div class="header-category">
-                                                        <p class="header-caption-category">Conference</p>
+                                                        <p class="header-caption-category">@{{e.event_type_name}}</p>
                                                     </div>
                                                 </div>
-                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
-                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
+                                                <h3 class="caption-title"><a href="#">@{{e.title}}</a></h3>
+                                                <p class="caption-text">by <a href="#">@{{e.organizer_name}}</a> </p>
                                                 {{--<hr class="caption-divider">--}}
-                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
-                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
-                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
+                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> @{{displayDate(e.start_date)}} </p>
+                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> @{{e.city}}</p>
+                                                <p class="caption-text caption-location">@{{e.venue}}</p>
                                                 <div class="footer-price">
                                                     <div class="caption-price-txt">
                                                         <span>Price</span>
                                                         <p>
-                                                            Rp. 12.500
-                                                        </p>
-                                                    </div>
-                                                    <div class="card-button">
-                                                        <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="yct-card">
-                                            <div class="media">
-                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                            <div class="caption">
-                                                <div class="caption-header">
-                                                    <div class="header-category">
-                                                        <p class="header-caption-category">Conference</p>
-                                                    </div>
-                                                </div>
-                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
-                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
-                                                <!--<hr class="caption-divider">-->
-                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
-                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
-                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
-                                                <div class="footer-price">
-                                                    <div class="caption-price-txt">
-                                                        <span>Price</span>
-                                                        <p>
-                                                            Rp. 12.500
-                                                        </p>
-                                                    </div>
-                                                    <div class="card-button">
-                                                        <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="yct-card">
-                                            <div class="media">
-                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                            <div class="caption">
-                                                <div class="caption-header">
-                                                    <div class="header-category">
-                                                        <p class="header-caption-category">Conference</p>
-                                                    </div>
-                                                </div>
-                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
-                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
-                                                <!--<hr class="caption-divider">-->
-                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
-                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
-                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
-                                                <div class="footer-price">
-                                                    <div class="caption-price-txt">
-                                                        <span>Price</span>
-                                                        <p>
-                                                            Rp. 12.500
-                                                        </p>
-                                                    </div>
-                                                    <div class="card-button">
-                                                        <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                                    </div>
-                                                    <div class="clearfix"></div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                        <div class="yct-card">
-                                            <div class="media">
-                                                <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                                <div class="caption hovered"></div>
-                                            </div>
-                                            <div class="caption">
-                                                <div class="caption-header">
-                                                    <div class="header-category">
-                                                        <p class="header-caption-category">Conference</p>
-                                                    </div>
-                                                </div>
-                                                <h3 class="caption-title"><a href="#">Standart Long Event Name Here</a></h3>
-                                                <p class="caption-text">by <a href="#">Organizer name</a> </p>
-                                                <!--<hr class="caption-divider">-->
-                                                <p class="caption-text caption-time"><i class="fa fa-clock-o time"></i> 15 October </p>
-                                                <p class="caption-text caption-state"> <i class="fa fa-map-marker location"></i> Bandung, West Java</p>
-                                                <p class="caption-text caption-location"> Gd. Sabuga ITB</p>
-                                                <div class="footer-price">
-                                                    <div class="caption-price-txt">
-                                                        <span>Price</span>
-                                                        <p>
-                                                            Rp. 12.500
+                                                            @{{formatMoney(e.ticket_price, 'Rp')}}
                                                         </p>
                                                     </div>
                                                     <div class="card-button">
@@ -393,8 +304,8 @@
                         <h2 class="org-line">Internship & Volunteer</h2>
                         <p class="sub-header">Pengalaman dan potensi diri menjadi modal utama bagi individu yang berkarier maupun berwirausaha. Menjadi sukarelawan dan menambah pengalaman melalui kegiatan praktikal akan menambah kepercayaan diri dalam menghadapi dunia nyata.</p>
                         <div class="title-row">
-                            <h3>Latest Vacancies</h3>
-                            <a href="#">view all list <i class="fa fa-angle-double-right"></i> </a>
+                            <h3>Upcoming Vacancies</h3>
+                            <a href="/vacancies">view all list <i class="fa fa-angle-double-right"></i> </a>
                         </div>
                         <div class="cards-container clearfix">
                             <div class="cards-grid clearfix">
@@ -518,8 +429,8 @@
                         <h2 class="org-line">Scholarships</h2>
                         <p class="sub-header">Banyak sekali informasi beasiswa yang tersedia dan menjadi kesempatan untuk individu yang ingin menggapai cita - citanya menuntut ilmu di universitas impiannya.</p>
                         <div class="title-row">
-                            <h3>Latest Scholarships</h3>
-                            <a href="#">view all list <i class="fa fa-angle-double-right"></i> </a>
+                            <h3>Upcoming Scholarships</h3>
+                            <a href="scholarships">view all list <i class="fa fa-angle-double-right"></i> </a>
                         </div>
                         <div class="cards-container clearfix">
                             <div class="cards-grid clearfix">

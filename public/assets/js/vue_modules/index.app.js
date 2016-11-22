@@ -20,9 +20,9 @@ var vue = new Vue({
     methods: {
 
         fetchEvents: function () {
-            this.$http.post('/api/public/events', this.filter)
+            this.$http.get('/api/public/upcomingevents?take=4')
                 .then(function (response) {
-                    var data = response.body.data.list;
+                    var data = response.body.data;
                     this.events = data;
                 }, function (err) {
                     console.log(err);

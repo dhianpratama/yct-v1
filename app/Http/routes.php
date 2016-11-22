@@ -21,6 +21,9 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/scholarships', 'AngularController@scholarshipPage');
     Route::get('/scholarship', 'AngularController@scholarSinglePage');
 
+    Route::get('/vacancies', 'AngularController@vacancyListPage');
+    Route::get('/vacancy', 'AngularController@vacancyDetailPage');
+
     Route::get('/unsupported-browser', 'AngularController@unsupported');
     Route::get('user/verify/{verificationCode}', ['uses' => 'Auth\AuthController@verifyUserEmail']);
     Route::get('auth/{provider}', ['uses' => 'Auth\AuthController@redirectToProvider']);
@@ -49,7 +52,10 @@ $api->group(['middleware' => ['api']], function ($api) {
 
     $api->get('public/event/{eventId}', 'EventController@getPublicEvent');
 
-    $api->get('public/scholarships', 'VacancyController@getPublicVacancyList');
+    $api->get('public/scholarships', 'ScholarshipController@getPublicScholarshipList');
+    $api->get('public/vacancies', 'VacancyController@getPublicVacancyList');
+
+    $api->get('public/upcomingevents', 'EventController@getPublicUpcomingEvents');
 });
 
 $api->group(['middleware' => ['api', 'api.auth']], function ($api) {

@@ -83,32 +83,32 @@
             <!-- Navigation -->
             <div id="mobile-menu"></div>
             <nav class="navigation closed clearfix">
-                <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
-                <ul class="sf-menu nav">
-                    <li>
-                        <a href="/">Home</a>
-                    </li>
-                    <li>
-                        <a href="/events">Events</a>
-                    </li>
-                    <li>
-                        <a href="#">Volunteer & Internship</a>
-                    </li>
-                    <li class="active">
-                        <a href="/scholarships">Scholarship</a>
-                    </li>
-                    <li><a href="/about_us">About YCT</a></li>
-                    <li><a href="/contact_us">Contact Us</a></li>
-                    <!--<li class="header-search-wrapper">-->
-                        <!--<form action="#" class="header-search-form">-->
-                            <!--<input type="text" class="form-control header-search" placeholder="Search"/>-->
-                            <!--<input type="submit" hidden="hidden"/>-->
-                        <!--</form>-->
-                    <!--</li>-->
-                    <!--<li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>-->
-                    <li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>
-                </ul>
-            </nav>
+                            <a href="#" class="menu-toggle btn"><i class="fa fa-bars"></i></a>
+                            <ul class="sf-menu nav">
+                                <li>
+                                    <a href="/">Home</a>
+                                </li>
+                                <li>
+                                    <a href="/events">Events</a>
+                                </li>
+                                <li>
+                                    <a href="/vacancies">Volunteer & Internship</a>
+                                </li>
+                                <li class="active">
+                                    <a href="/scholarships">Scholarship</a>
+                                </li>
+                                <li><a href="/about_us">About YCT</a></li>
+                               <!-- <li><a href="/contact_us">Contact Us</a></li>-->
+                                <!--<li class="header-search-wrapper">-->
+                                    <!--<form action="#" class="header-search-form">-->
+                                        <!--<input type="text" class="form-control header-search" placeholder="Search"/>-->
+                                        <!--<input type="submit" hidden="hidden"/>-->
+                                    <!--</form>-->
+                                <!--</li>-->
+                                <!--<li><a href="#" class="btn-search-toggle"><i class="fa fa-search"></i></a></li>-->
+                                <!--<li><a href="#" class="btn btn-theme btn-submit-event">SUBMIT EVENT <i class="fa fa-plus-circle"></i></a></li>-->
+                            </ul>
+                        </nav>
             <!-- /Navigation -->
 
         </div>

@@ -32,6 +32,14 @@ class AngularController extends Controller
         return view('yct_public/event-single');
     }
 
+    public function vacancyListPage(){
+        return view('yct_public/vacancy-list');
+    }
+
+    public function vacancyDetailPage(){
+        return view('yct_public/vacancy-detail');
+    }
+
     public function scholarshipPage(){
         return view('yct_public/scholarship-list');
     }

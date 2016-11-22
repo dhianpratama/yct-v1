@@ -98,7 +98,7 @@
                                     <a href="/scholarships">Scholarship</a>
                                 </li>
                                 <li class="active"><a href="/about_us">About YCT</a></li>
-                                <li><a href="/contact_us">Contact Us</a></li>
+                               <!-- <li><a href="/contact_us">Contact Us</a></li>-->
                                 <!--<li class="header-search-wrapper">-->
                                     <!--<form action="#" class="header-search-form">-->
                                         <!--<input type="text" class="form-control header-search" placeholder="Search"/>-->
