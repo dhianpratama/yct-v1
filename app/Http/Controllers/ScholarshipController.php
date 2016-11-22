@@ -94,4 +94,28 @@ class ScholarshipController extends Controller
         
         return response()->success($result); 
     }
+
+     public function getPublicUpcomingScholarships(){
+        $take = Input::get('take');
+
+        $query = DB::table('scholarships')
+            ->where('scholarships.is_published',1)
+            ->where('scholarships.deadline', '>=', time());    
+        
+        if($take>0){
+            $query = $query->take($take);
+        }
+
+        $scholarships = $query
+                ->select(   
+                    'scholarships.id as id',
+                    'scholarships.title as title', 
+                    'scholarships.description as description', 
+                    'scholarships.organizer as organizer', 
+                    'scholarships.deadline as deadline'
+                )
+                ->get();
+
+        return response()->success($scholarships);
+    }
 }

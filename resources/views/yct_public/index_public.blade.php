@@ -258,7 +258,7 @@
                                 </div>
                                 <div class="cards-container clearfix">
                                     <div class="cards-grid clearfix">
-                                        <div class="yct-card" v-for="e in events">
+                                        <div class="yct-card" v-cloak v-for="e in events">
                                             <div class="media">
                                                 <img v-bind:src="e.picture_url" alt="">
                                                 <div class="caption hovered"></div>
@@ -309,24 +309,24 @@
                         </div>
                         <div class="cards-container clearfix">
                             <div class="cards-grid clearfix">
-                                <div class="yct-card">
+                                <div class="yct-card" v-cloak v-for="e in vacancies">
                                     <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <img v-bind:src="e.picture_url" alt="">
                                         <div class="caption hovered"></div>
                                     </div>
                                     <div class="caption">
                                         <div class="caption-header">
                                             <div class="header-category">
-                                                <p class="header-caption-category">Volunteer</p>
+                                                <p class="header-caption-category">@{{e.vacancy_type_name}}</p>
                                             </div>
                                         </div>
-                                        <h3 class="caption-title"><a href="#">Dibutuhkan relawan untuk mengajar di Papua</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Papua Mengajar</a> </p>
+                                        <h3 class="caption-title"><a href="#">@{{e.title}}</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">@{{e.company_name}}</a> </p>
                                         <div class="footer-price vacancy">
                                             <div class="caption-price-txt">
                                                 <span>OPEN UNTIL</span>
                                                 <p>
-                                                    20 Desember
+                                                    @{{displayDate(e.due_date)}}
                                                 </p>
                                             </div>
                                             <div class="card-button">
@@ -335,88 +335,7 @@
                                             <div class="clearfix"></div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="yct-card">
-                                    <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                        <div class="caption hovered"></div>
-                                    </div>
-                                    <div class="caption">
-                                        <div class="caption-header">
-                                            <div class="header-category">
-                                                <p class="header-caption-category">Internship</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="caption-title"><a href="#">Bergabunglah menjadi bagian tim kami</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Qerja</a> </p>
-                                        <div class="footer-price vacancy">
-                                            <div class="caption-price-txt">
-                                                <span>OPEN UNTIL</span>
-                                                <p>
-                                                    5 January
-                                                </p>
-                                            </div>
-                                            <div class="card-button">
-                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="yct-card">
-                                    <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                        <div class="caption hovered"></div>
-                                    </div>
-                                    <div class="caption">
-                                        <div class="caption-header">
-                                            <div class="header-category">
-                                                <p class="header-caption-category">Volunteer</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="caption-title"><a href="#">Dibutuhkan relawan untuk mengajar di Papua</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Papua Mengajar</a> </p>
-                                        <div class="footer-price vacancy">
-                                            <div class="caption-price-txt">
-                                                <span>OPEN UNTIL</span>
-                                                <p>
-                                                    20 Desember
-                                                </p>
-                                            </div>
-                                            <div class="card-button">
-                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="yct-card">
-                                    <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                        <div class="caption hovered"></div>
-                                    </div>
-                                    <div class="caption">
-                                        <div class="caption-header">
-                                            <div class="header-category">
-                                                <p class="header-caption-category">Volunteer</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="caption-title"><a href="#">Dibutuhkan relawan untuk mengajar di Papua</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Papua Mengajar</a> </p>
-                                        <div class="footer-price vacancy">
-                                            <div class="caption-price-txt">
-                                                <span>OPEN UNTIL</span>
-                                                <p>
-                                                    20 Desember
-                                                </p>
-                                            </div>
-                                            <div class="card-button">
-                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
+                                </div>                                
                             </div>
                         </div>
                     </div>
@@ -434,9 +353,9 @@
                         </div>
                         <div class="cards-container clearfix">
                             <div class="cards-grid clearfix">
-                                <div class="yct-card">
+                                <div class="yct-card" v-cloak v-for="e in scholarships">
                                     <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
+                                        <img v-bind:src="e.picture_url" alt="">
                                         <div class="caption hovered"></div>
                                     </div>
                                     <div class="caption">
@@ -445,94 +364,13 @@
                                                 <p class="header-caption-category">Scholarship</p>
                                             </div>
                                         </div>
-                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
+                                        <h3 class="caption-title"><a href="#">@{{e.title}}</a></h3>
+                                        <p class="caption-text vacancy">by <a href="#">@{{e.organizer}}</a> </p>
                                         <div class="footer-price vacancy">
                                             <div class="caption-price-txt">
                                                 <span>OPEN UNTIL</span>
                                                 <p>
-                                                    1 December
-                                                </p>
-                                            </div>
-                                            <div class="card-button">
-                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="yct-card">
-                                    <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                        <div class="caption hovered"></div>
-                                    </div>
-                                    <div class="caption">
-                                        <div class="caption-header">
-                                            <div class="header-category">
-                                                <p class="header-caption-category">Scholarship</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
-                                        <div class="footer-price vacancy">
-                                            <div class="caption-price-txt">
-                                                <span>OPEN UNTIL</span>
-                                                <p>
-                                                    1 December
-                                                </p>
-                                            </div>
-                                            <div class="card-button">
-                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="yct-card">
-                                    <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                        <div class="caption hovered"></div>
-                                    </div>
-                                    <div class="caption">
-                                        <div class="caption-header">
-                                            <div class="header-category">
-                                                <p class="header-caption-category">Scholarship</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
-                                        <div class="footer-price vacancy">
-                                            <div class="caption-price-txt">
-                                                <span>OPEN UNTIL</span>
-                                                <p>
-                                                    1 December
-                                                </p>
-                                            </div>
-                                            <div class="card-button">
-                                                <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="yct-card">
-                                    <div class="media">
-                                        <img src="assets/img/preview/hotel-1.jpg" alt="">
-                                        <div class="caption hovered"></div>
-                                    </div>
-                                    <div class="caption">
-                                        <div class="caption-header">
-                                            <div class="header-category">
-                                                <p class="header-caption-category">Scholarship</p>
-                                            </div>
-                                        </div>
-                                        <h3 class="caption-title"><a href="#">Beasiswa Djarum untuk Negeri</a></h3>
-                                        <p class="caption-text vacancy">by <a href="#">Yayasan Djarum</a> </p>
-                                        <div class="footer-price vacancy">
-                                            <div class="caption-price-txt">
-                                                <span>OPEN UNTIL</span>
-                                                <p>
-                                                    1 December
+                                                    @{{displayDate(e.deadline)}}
                                                 </p>
                                             </div>
                                             <div class="card-button">
@@ -746,7 +584,7 @@
             theme.initTestimonials();
             theme.initCorouselSlider4();
             theme.initCorouselSlider3();
-            theme.initGoogleMap();
+            //theme.initGoogleMap();
         });
         jQuery(window).load(function () {
             theme.initAnimation();

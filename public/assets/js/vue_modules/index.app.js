@@ -2,6 +2,8 @@ var vue = new Vue({
     el: '#indexpage',
     data: {
         events: [],
+        vacancies: [],
+        scholarships: [],
         filter: {
             categoryId: 0,
             eventTypeId: null,
@@ -29,6 +31,26 @@ var vue = new Vue({
                 });
         },
 
+         fetchVacancies: function () {
+            this.$http.get('/api/public/upcomingvacancies?take=4')
+                .then(function (response) {
+                    var data = response.body.data;
+                    this.vacancies = data;
+                }, function (err) {
+                    console.log(err);
+                });
+        },
+
+        fetchScholarships: function () {
+            this.$http.get('/api/public/upcomingscholarships?take=4')
+                .then(function (response) {
+                    var data = response.body.data;
+                    this.scholarships = data;
+                }, function (err) {
+                    console.log(err);
+                });
+        },
+
         formatMoney: function (n, currency) {
             return currency + " " + n.toFixed(0).replace(/./g, function (c, i, a) {
                 return i > 0 && c !== "," && (a.length - i) % 3 === 0 ? "." + c : c;
@@ -46,6 +68,8 @@ var vue = new Vue({
 // to change ready function, use this !!
 function init() {
     vue.fetchEvents();
+    vue.fetchVacancies();
+    vue.fetchScholarships();
 };
 
 init();

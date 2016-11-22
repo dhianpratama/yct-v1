@@ -102,4 +102,32 @@ class VacancyController extends Controller
         
         return response()->success($result); 
     }
+
+    public function getPublicUpcomingVacancies(){
+        $take = Input::get('take');
+
+        $query = DB::table('vacancies')
+            ->leftJoin('vacancy_types', 'vacancies.vacancy_type_id', '=', 'vacancy_types.id')
+            ->leftJoin('organizers', 'vacancies.organizer_id', '=', 'organizers.id')
+            ->where('vacancies.is_published',1)
+            ->where('vacancies.due_date', '>', time());    
+        
+        if($take>0){
+            $query = $query->take($take);
+        }
+
+        $vacancies = $query
+                ->select(   
+                    'vacancies.id as id',
+                    'vacancies.title as title', 
+                    'vacancies.job_description as job_description', 
+                    'vacancy_types.name as vacancy_type_name', 
+                    'vacancies.company_name as company_name', 
+                    'vacancies.description as description',
+                    'vacancies.due_date as due_date'
+                )
+                ->get();
+
+        return response()->success($vacancies);
+    }
 }

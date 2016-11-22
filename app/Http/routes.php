@@ -56,6 +56,8 @@ $api->group(['middleware' => ['api']], function ($api) {
     $api->get('public/vacancies', 'VacancyController@getPublicVacancyList');
 
     $api->get('public/upcomingevents', 'EventController@getPublicUpcomingEvents');
+    $api->get('public/upcomingvacancies', 'VacancyController@getPublicUpcomingVacancies');
+    $api->get('public/upcomingscholarships', 'ScholarshipController@getPublicUpcomingScholarships');
 });
 
 $api->group(['middleware' => ['api', 'api.auth']], function ($api) {
