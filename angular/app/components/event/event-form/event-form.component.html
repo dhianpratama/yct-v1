@@ -2,8 +2,8 @@
   <h1>Event Type Form <small></small></h1>
   <ol class="breadcrumb">
     <li><a ui-sref="app.landing"><i class="fa fa-dashboard"></i> Home</a></li>
-    <li><a ui-sref="app.userlist">Event Type Lists</a></li>
-    <li class="active">Event Type Form</li>
+    <li><a ui-sref="app.userlist">Event Lists</a></li>
+    <li class="active">Event Form</li>
   </ol>
 </section>
 <section class="content">
@@ -159,7 +159,15 @@
                 </p>
               </div>
             </div>
-            <div class="form-group" ng-class="{ 'has-error': eventForm.start_time.$invalid && ( vm.formSubmitted || eventForm.start_time.$touched) }">
+            <div class="form-group">
+              <label for="inputEmail3" class="col-sm-4 control-label"></label>
+              <div class="col-sm-8">
+                <p class="input-group">
+                  <button class="btn btn-warning btn-sm" ng-click="vm.onClearDate()">Clear Date</button>
+                </p>
+              </div>
+            </div>
+            <!--<div class="form-group" ng-class="{ 'has-error': eventForm.start_time.$invalid && ( vm.formSubmitted || eventForm.start_time.$touched) }">
               <label for="inputEmail3" class="col-sm-4 control-label">Start Time</label>
               <div class="col-sm-8">
                 <div uib-timepicker ng-model="vm.data.start_time" ng-change="vm.st_changed()" show-meridian="false" name="start_time" neutral-timezone required></div>
@@ -172,7 +180,7 @@
                 <div uib-timepicker ng-model="vm.data.end_time" ng-change="vm.et_changed()" show-meridian="false" neutral-timezone name="end_time" required></div>
                 <p ng-show="eventForm.end_time.$error.required && ( vm.formSubmitted || eventForm.end_time.$touched)" class="help-block" style="color:red;">End time is required.</p>
               </div>
-            </div>
+            </div>-->
           </div>
         
       </div>

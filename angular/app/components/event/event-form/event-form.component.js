@@ -163,6 +163,11 @@ class EventFormController {
     this.filteredCities = newCities;
   }
 
+  onClearDate() {
+    this.data.start_date = null;
+    this.data.end_date = null;
+  }
+
   uploadFile(file, errFiles) {
     let that = this;
     that.$scope.f = file;

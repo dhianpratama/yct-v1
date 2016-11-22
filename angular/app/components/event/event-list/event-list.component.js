@@ -35,11 +35,9 @@ class EventListController {
           DTColumnBuilder.newColumn('title').withTitle('Title'),
           DTColumnBuilder.newColumn('start_date_display').withTitle('Start Date'),
           DTColumnBuilder.newColumn('end_date_display').withTitle('End Date'),
-          DTColumnBuilder.newColumn('start_time_display').withTitle('Start Time'),
-          DTColumnBuilder.newColumn('end_time_display').withTitle('End Time'),
           DTColumnBuilder.newColumn('event_venue').withTitle('Venue'),
           DTColumnBuilder.newColumn('city').withTitle('City'),
-          DTColumnBuilder.newColumn('is_published').withTitle('Is Published?')
+          DTColumnBuilder.newColumn('published').withTitle('Is Published?')
         ]
 
         this.displayTable = true

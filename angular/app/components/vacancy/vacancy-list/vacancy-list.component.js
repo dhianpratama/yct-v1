@@ -1,5 +1,5 @@
 class VacancyListController {
-  constructor ($scope, $state, $compile, $log, DTOptionsBuilder, DTColumnBuilder, API) {
+  constructor($scope, $state, $compile, $log, DTOptionsBuilder, DTColumnBuilder, API) {
     'ngInject'
     this.API = API
     this.$state = $state
@@ -22,8 +22,9 @@ class VacancyListController {
             .withOption('width', '10%')
             .notSortable()
             .renderWith(actionsHtml),
-          DTColumnBuilder.newColumn('title').withTitle('title'),
-          DTColumnBuilder.newColumn('caption').withTitle('caption')          
+          DTColumnBuilder.newColumn('title').withTitle('Job Title'),
+          DTColumnBuilder.newColumn('company_name').withTitle('Company'),
+          DTColumnBuilder.newColumn('due_date').withTitle('Application Deadline'),
         ]
 
         this.displayTable = true
@@ -46,7 +47,7 @@ class VacancyListController {
 
   }
 
-  delete (id) {
+  delete(id) {
     let API = this.API
     let $state = this.$state
 
@@ -76,7 +77,7 @@ class VacancyListController {
     })
   }
 
-  $onInit () {}
+  $onInit() { }
 }
 
 export const VacancyListComponent = {

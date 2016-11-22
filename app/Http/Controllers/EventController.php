@@ -19,6 +19,15 @@ class EventController extends Controller
     public function getIndex()
     {
         $events = Event::all();
+
+        $seq = 0;
+        foreach ($events as $ev) {
+            if($ev->is_published==true){
+                $events[$seq]->published = 'Yes';
+            }
+            $seq++;
+        }
+
         return response()->success($events);
     }
 

@@ -51,6 +51,12 @@ class VacancyController extends Controller
         $vacancy->is_published = Input::get('is_published');
         $vacancy->vacancy_type_id = Input::get('vacancy_type_id');  
         $vacancy->organizer_id = Input::get('organizer_id');
+        $vacancy->job_description = Input::get('job_description');
+        $vacancy->company_name = Input::get('company_name');
+        $vacancy->company_description = Input::get('company_description');
+        $vacancy->salary_from = Input::get('salary_from');
+        $vacancy->salary_to = Input::get('salary_to');
+        $vacancy->city_id = Input::get('city_id');
 
         $vacancy->save();
         
