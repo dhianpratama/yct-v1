@@ -448,7 +448,7 @@
                 theme.initPartnerSlider2();
                 theme.initImageCarousel();
                 theme.initTestimonials();
-                theme.initGoogleMap();
+                //theme.initGoogleMap();
             });
             jQuery(window).load(function () {
                 theme.initAnimation();

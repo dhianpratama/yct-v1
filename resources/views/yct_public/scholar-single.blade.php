@@ -409,7 +409,7 @@
         theme.initCorouselSlider4();
         theme.initCorouselSlider3();
         theme.initTestimonials();
-        theme.initGoogleMap();
+        //theme.initGoogleMap();
     });
     jQuery(window).load(function () {
         theme.initAnimation();
