@@ -148,40 +148,38 @@
                     </select>
                 </div>
             </div>
-            <div class="tab-pane fade active in">
-                <!-- new card UI grid systems-->
-                <div class="row">
-                    <div class="events-grid clearfix"  >
-                    <div class="yct-card" v-for="s in scholarships">
-                        <div class="media">
-                            <img src="assets/img/startup-593341_1920.jpg" alt="">
-                            <div class="caption hovered"></div>
-                        </div>
-                        <div class="caption">
-                            <div class="caption-header">
-                                <div class="header-category">
-                                    <p class="header-caption-category">@{{s.event_type_name }}</p>
+            <div id="list-view"  class="tab-pane fade active in" role="tabpanel">
+                <div class="thumbnails events vertical">
+                    <div v-for="e in scholarships" v-cloak>
+                        <div class="thumbnail no-border no-padding">
+                            <div class="row">
+                                <div class="col-md-3 col-sm-3 col-xs-4">
+                                    <div class="media">
+                                        <a href="#" class="like"><i class="fa fa-heart"></i></a>
+                                        <img src="assets/img/preview/event-1.jpg" alt="">
+                                        <div class="caption hovered"></div>
+                                    </div>
+                                </div>
+                                <div class="col-md-9 col-sm-9 col-xs-8">
+                                    <div class="caption">
+                                        <a href="#" class="pull-right">
+                                            <span class="fa-stack fa-lg">
+                                                <i class="fa fa-stack-2x fa-circle-thin"></i>
+                                                <i class="fa fa-stack-1x fa-share-alt"></i>
+                                            </span>
+                                        </a>
+                                        <h3 class="caption-title"><a href="#">@{{e.title}}</a></h3>
+                                        <p class="caption-category"><i class="fa fa-file-text-o"></i> @{{displayDate(e.deadline)}}</p>
+                                        <p class="caption-text">@{{e.description}}</p>
+                                        <p class="caption-more"><a href="#" class="btn btn-theme">More Info</a></p>
+                                    </div>
                                 </div>
                             </div>
-                            <h3 class="caption-title"><a href="#">@{{s.title}}</a></h3>
-                            <p class="caption-text vacancy">by <a href="#">@{{s.organizer_name}}</a> </p>
-                            <div class="footer-price vacancy">
-                                <div class="caption-price-txt">
-                                    <span>OPEN UNTIL</span>
-                                    <p>
-                                        @{{displayDate(s.due_date)}}
-                                    </p>
-                                </div>
-                                <div class="card-button">
-                                    <a href="#" class="btn btn-theme-sm btn-theme-transparent pull-right">info</a>
-                                </div>
-                                <div class="clearfix"></div>
-                            </div>
                         </div>
+
+                        <hr class="page-divider half"/>
                     </div>
                 </div>
-                </div>
-                <!-- /new card UI grid systems-->
 
                 <!-- Pagination -->
                 <div class="pagination-wrapper">
@@ -195,7 +193,6 @@
                     </ul>
                 </div>
                 <!-- /Pagination -->
-
             </div>
         </section>
         <!-- /Content -->

@@ -71,21 +71,16 @@ class ScholarshipController extends Controller
     }
 
     public function getPublicScholarshipList(){
-        $query = DB::table('vacancies')
-            ->leftJoin('scholarship_types', 'vacancies.scholarship_type_id', '=', 'scholarship_types.id')
-            ->leftJoin('organizers', 'vacancies.organizer_id', '=', 'organizers.id')
-            ->where('vacancies.is_published',1)
-            ->where('scholarship_types.name','Scholarship');
+        $query = DB::table('scholarships')
+            ->where('scholarships.is_published',1);
         
         $vacancies = $query
                 ->select(   
-                    'vacancies.id as id',
-                    'vacancies.title as title', 
-                    'vacancies.caption as caption', 
-                    'scholarship_types.name as event_type_name', 
-                    'organizers.name as organizer_name', 
-                    'vacancies.description as description',
-                    'vacancies.due_date as due_date'
+                    'scholarships.id as id',
+                    'scholarships.title as title', 
+                    'scholarships.description as description', 
+                    'scholarships.organizer as organizer', 
+                    'scholarships.deadline as deadline'
                 )
                 ->get();
 

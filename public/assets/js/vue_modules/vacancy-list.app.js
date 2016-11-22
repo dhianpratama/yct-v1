@@ -1,7 +1,7 @@
 var vue = new Vue({
     el: '#vacancylistpage',
     data: {
-        scholarships: null
+        vacancies: []
     },
     components: {
         VPaginator: VuePaginator
@@ -17,7 +17,7 @@ var vue = new Vue({
             this.$http.get('/api/public/vacancies')
                 .then(function (response) {
                     var data = response.body.data.list;
-                    this.scholarships = data;
+                    this.vacancies = data;
                 }, function (err) {
                     console.log(err);
                 });
