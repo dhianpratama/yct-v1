@@ -525,4 +525,31 @@ export function RoutesConfig ($stateProvider, $urlRouterProvider) {
         eventId: null
       }
     })
+
+    .state('app.scholarshiplist', {
+      url: '/scholarship-list',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<scholarship-list></scholarship-list>'
+        }
+      }
+    })
+    .state('app.scholarshipform', {
+      url: '/scholarship-form/:scholarshipId',
+      data: {
+        auth: true
+      },
+      views: {
+        'main@app': {
+          template: '<scholarship-form></scholarship-form>'
+        }
+      },
+      params: {
+        alerts: null,
+        eventId: null
+      }
+    })
 }

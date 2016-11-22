@@ -38,6 +38,8 @@ import { VacancyListComponent } from './app/components/vacancy/vacancy-list/vaca
 import { VacancyFormComponent } from './app/components/vacancy/vacancy-form/vacancy-form.component'
 import { VacancyTypeListComponent } from './app/components/vacancy-type/vacancy-type-list/vacancy-type-list.component'
 import { VacancyTypeFormComponent } from './app/components/vacancy-type/vacancy-type-form/vacancy-type-form.component'
+import { ScholarshipListComponent } from './app/components/scholarship/scholarship-list/scholarship-list.component'
+import { ScholarshipFormComponent } from './app/components/scholarship/scholarship-form/scholarship-form.component'
 
 angular.module('app.components')
   .component('tablesSimple', TablesSimpleComponent)
@@ -80,3 +82,5 @@ angular.module('app.components')
   .component('vacancyForm', VacancyFormComponent)
   .component('vacancyTypeList', VacancyTypeListComponent)
   .component('vacancyTypeForm', VacancyTypeFormComponent)
+  .component('scholarshipList', ScholarshipListComponent)
+  .component('scholarshipForm', ScholarshipFormComponent)

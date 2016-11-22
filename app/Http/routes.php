@@ -65,4 +65,5 @@ $api->group(['middleware' => ['api', 'api.auth', 'role:admin.super|admin.user']]
     $api->controller('organizer', 'OrganizerController');
     $api->controller('vacancy', 'VacancyController');
     $api->controller('vacancytype', 'VacancyTypeController');
+    $api->controller('scholarship', 'ScholarshipController');
 });
